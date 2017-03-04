@@ -1,7 +1,7 @@
 {
-  "name": "react-transform-boilerplate",
+  "name": "myblog",
   "version": "1.0.0",
-  "description": "A new Webpack boilerplate with hot reloading React components, and error handling on module and component level.",
+  "description": "react",
   "scripts": {
     "clean": "rimraf dist",
     "build:webpack": "NODE_ENV=production webpack --config webpack.config.prod.js",
@@ -14,19 +14,9 @@
     "url": "https://github.com/gaearon/react-transform-boilerplate.git"
   },
   "keywords": [
-    "react",
-    "reactjs",
-    "boilerplate",
-    "hot",
-    "reload",
-    "hmr",
-    "live",
-    "edit",
-    "webpack",
-    "babel",
-    "react-transform"
+    "react"
   ],
-  "author": "Dan Abramov <dan.abramov@me.com> (http://github.com/gaearon)",
+  "author": "Fighting_Liu",
   "license": "CC0-1.0",
   "bugs": {
     "url": "https://github.com/gaearon/react-transform-boilerplate/issues"
@@ -55,7 +45,9 @@
     "webpack-hot-middleware": "^2.6.0"
   },
   "dependencies": {
+    "axios": "^0.15.3",
     "react": "^15.3.1",
-    "react-dom": "^15.3.1"
+    "react-dom": "^15.3.1",
+    "react-router": "^3.0.2"
   }
 }
