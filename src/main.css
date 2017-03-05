@@ -47,7 +47,7 @@ footer{
 }
 .btn{
   display: inline-block;
-  padding: 6px 12px;
+  padding: 5px 10px;
   margin-bottom: 0;
   font-size: 14px;
   font-weight: 400;
@@ -64,7 +64,7 @@ footer{
   user-select: none;
   background-image: none;
   border: 1px solid transparent;
-  border-radius: 4px;
+  border-radius: 9px;
   font-family: inherit;
   color: #333;
   background-color: #fff;
@@ -100,6 +100,11 @@ footer a:last-child{
   text-align: center;
   justify-content: center;/*在主轴居中*/
 }
+@media(min-width:750px){
+  .home-cover{
+    margin-top: 15%;
+  }
+}
 .home-cover p{
   margin-bottom: 10px;
   opacity: 0.7;
@@ -107,19 +112,24 @@ footer a:last-child{
 .blog-card{
   width: 96%;
   margin: 20px auto;
-  background-color: #f6feff;
-  border-radius: 4px;
+  background-color: #f8f8f8;
 }
 .blog-index{
   color: #f1f1f1;
-  background-color: #e2f1fd;
+  background-color: rgb(0, 188, 212);
   text-align: center;
   line-height: 2.4;
+  border-radius: 4px 4px 0 0;
 }
 .blog-desc{
   padding: 10px;
   box-shadow: rgba(0, 0, 0, 0.2) 0 4px 6px;
   position: relative;
+  border-radius: 4px;
+}
+.blog-desc h3{
+  font-family: arial;
+  color: #888;
 }
 .blog-desc p{
   font-size:14px;
@@ -128,7 +138,7 @@ footer a:last-child{
 }
 .blog-desc a:hover{
   color: #fff;
-  background-color: #81cee4;
+  background-color: rgb(0, 188, 212);
   border-color: #53c0e0;
 }
 .blog-desc span{
@@ -138,7 +148,7 @@ footer a:last-child{
 }
 .leftnav{
   background-color: #f5f5f5;
-  width: 260px;
+  width: 20%;
   flex-shrink: 0;
 }
 .leftnav h1{
@@ -155,4 +165,41 @@ footer a:last-child{
 }
 .leftnav a:hover{
   background-color: #d9d9d9;
+}
+
+.work-card{
+  width: 250px;
+  margin: 20px auto;
+  background-color: #f8f8f8;
+  transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+}
+@media(min-width:750px){
+  .work-card{
+    float: left;
+    margin: 20px 20px;
+  }
+}
+.work-card:hover{
+  box-shadow: rgba(0, 0, 0, 0.247059) 0 14px 45px,rgba(0, 0, 0, 0.219608) 0 10px 18px;
+}
+.work-img{
+  padding: 10px;
+  height: 250px;
+  background-image: url(./image/get-started.svg);
+  background-size: cover;
+  background-position: 50% 50%;
+  border-radius: 4px 4px 0 0;
+}
+.work-title{
+  color: rgba(0, 0, 0, 0.870588);
+  background-color: rgb(238, 238, 238);
+  text-align: center;
+  line-height: 2.4;
+  border-radius: 0 0 4px 4px;
+  font-weight: 500;
+}
+.work-title span{
+  font-weight: normal;
+  font-size: 13px;
+  
 }
