@@ -10,7 +10,7 @@ class Work extends React.Component {
     }
   }
   componentDidMount(){
-    axios.get('https://raw.githubusercontent.com/fightingljm/myblog/master/blogs/blogs.json')
+    axios.get('https://raw.githubusercontent.com/fightingljm/myblog/master/works/works.json')
       .then(res => this.setState({data:res.data}))
   }
   render(){
@@ -21,6 +21,7 @@ class Work extends React.Component {
           this.state.data.map(item => (
             <div key={Math.random()} className='work-card'>
               {/* <div className='work-img' style={{backgroundImage: 'url(../image/get-started.svg)'}}></div> */}
+              {/* <div className='work-img' style={{backgroundImage: `url(${item.url})`}}></div> */}
               <div className='work-img'></div>
               <div className='work-title'>
                 {item.title}&nbsp;&nbsp;&nbsp;
