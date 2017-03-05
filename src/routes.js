@@ -6,6 +6,7 @@ import Home from './components/Home.js'
 import Blog from './components/Blog.js'
 import Work from './components/Work.js'
 import About from './components/About.js'
+import Post from './components/Post.js'
 
 export default function () {
   return(
@@ -15,6 +16,7 @@ export default function () {
         <Route path='blog' component={Blog}/>
         <Route path='work' component={Work}/>
         <Route path='about' component={About}/>
+        <Route path='post/:title' component={Post}/>
       </Route>
     </Router>
   )
