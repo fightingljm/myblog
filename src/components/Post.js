@@ -1,6 +1,13 @@
 import React from 'react';
 import axios from 'axios';
-import marked from 'marked'
+import marked from 'marked';
+import hljs from 'highlight.js';
+
+marked.setOptions({
+  highlight: function (code) {
+    return require('highlight.js').highlightAuto(code).value;
+  }
+})
 
 class Post extends React.Component {
   constructor() {
@@ -10,7 +17,7 @@ class Post extends React.Component {
     }
   }
   componentDidMount(){
-    axios.get(`https://raw.githubusercontent.com/fightingljm/myblog/master/blogs/${this.props.params.title}`)
+    axios.get(`https://raw.githubusercontent.com/fightingljm/myblog/master/blogs/${this.props.params.title}.md`)
       .then(res => this.setState({data:res.data}))
   }
   render(){
