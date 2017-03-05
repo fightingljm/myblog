@@ -16,6 +16,11 @@ html,body,#root{
   flex-direction: column;
   height: 100%;
 }
+@media(min-width:750px){
+  .root{
+    flex-direction: row;
+  }
+}
 /*项目*/
 header{
   height: 80px;
@@ -128,4 +133,24 @@ footer a:last-child{
   position: absolute;
   right: 10px;
   bottom: 15px;
+}
+.leftnav{
+  background-color: #f5f5f5;
+  width: 260px;
+  flex-shrink: 0;
+}
+.leftnav h1{
+  text-align: center;
+  line-height: 2.6;
+  font-size: 24px;
+}
+.leftnav a{
+  display: block;
+  font-size: 18px;
+  line-height: 3;
+  padding-left: 20px;
+  color: #555;
+}
+.leftnav a:hover{
+  background-color: #d9d9d9;
 }
