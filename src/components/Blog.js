@@ -25,7 +25,7 @@ class Blog extends React.Component {
                 <h3>{item.title}</h3>
                 <p>{item.desc}</p>
                 <Link className='btn' to={`post/${item.url}`}>阅读更多</Link>
-                <span>{item.date}</span>
+                <span>{item.data}</span>
               </div>
             </div>
           ))
