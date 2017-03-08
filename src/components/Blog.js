@@ -2,6 +2,10 @@ import React from 'react';
 import axios from 'axios';
 import { Link } from 'react-router'
 
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import LinearProgress from 'material-ui/LinearProgress';
+
+
 class Blog extends React.Component {
   constructor() {
     super();
@@ -17,7 +21,10 @@ class Blog extends React.Component {
     return(
       <div style={{width:'100%'}}>
         {
-          this.state.data.length===0 ? '请稍后' :
+          this.state.data.length===0 ?
+          <MuiThemeProvider>
+            <LinearProgress mode="indeterminate" />
+          </MuiThemeProvider> :
           this.state.data.map((item,index) => (
             <div key={index} className='blog-card'>
               <div className='blog-index'>{index+1}</div>

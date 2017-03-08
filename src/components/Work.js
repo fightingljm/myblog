@@ -1,35 +1,47 @@
 import React from 'react';
-import axios from 'axios';
-import { Link } from 'react-router'
+
+import img1 from '../image/get-started.svg'
+import img2 from '../image/css-framework.svg'
+import img3 from '../image/components.svg'
 
 class Work extends React.Component {
   constructor() {
     super();
     this.state={
-      data:[]
+
     }
-  }
-  componentDidMount(){
-    axios.get('https://raw.githubusercontent.com/fightingljm/myblog/master/works/works.json')
-      .then(res => this.setState({data:res.data}))
   }
   render(){
     return(
       <div style={{width:'100%'}}>
-        {
-          this.state.data.length===0 ? '请稍后' :
-          this.state.data.map(item => (
-            <div key={Math.random()} className='work-card'>
-              {/* <div className='work-img' style={{backgroundImage: 'url(../image/get-started.svg)'}}></div> */}
-              {/* <div className='work-img' style={{backgroundImage: `url(${item.url})`}}></div> */}
-              <div className='work-img'></div>
-              <div className='work-title'>
-                {item.title}&nbsp;&nbsp;&nbsp;
-                <span>{item.date}</span>
-              </div>
-            </div>
-          ))
-        }
+        <div className='work-card'>
+          <div className='work-img' style={{backgroundImage: `url(${img1})`}}></div>
+          <div className='work-title'>
+            第一篇文章&nbsp;&nbsp;&nbsp;
+            <span>2017.03.03</span>
+          </div>
+        </div>
+        <div className='work-card'>
+          <div className='work-img' style={{backgroundImage: `url(${img2})`}}></div>
+          <div className='work-title'>
+            第一篇文章&nbsp;&nbsp;&nbsp;
+            <span>2017.03.03</span>
+          </div>
+        </div>
+        <div className='work-card'>
+          <div className='work-img' style={{backgroundImage: `url(${img3})`}}></div>
+          <div className='work-title'>
+            第一篇文章&nbsp;&nbsp;&nbsp;
+            <span>2017.03.03</span>
+          </div>
+        </div>
+        <div className='work-card'>
+          <div className='work-img' style={{backgroundImage: `url(${img1})`}}></div>
+          <div className='work-title'>
+            第一篇文章&nbsp;&nbsp;&nbsp;
+            <span>2017.03.03</span>
+          </div>
+        </div>
       </div>
     )
   }

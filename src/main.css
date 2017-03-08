@@ -201,5 +201,8 @@ footer a:last-child{
 .work-title span{
   font-weight: normal;
   font-size: 13px;
-  
+
+}
+.about-warp{
+  width: 100%;
 }
