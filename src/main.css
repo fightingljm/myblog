@@ -93,7 +93,7 @@ footer a:last-child{
 .home-cover{
   height: 50%;
   margin-top: 25%;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(245,245,245,0.5);
   display: flex;
   /*flex-direction: column;*/
   align-items: center;/*在副轴居中(垂直居中)*/
@@ -135,6 +135,9 @@ footer a:last-child{
   font-size:14px;
   opacity: 0.8;
   margin-bottom: 5px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .blog-desc a:hover{
   color: #fff;
@@ -169,14 +172,14 @@ footer a:last-child{
 
 .work-card{
   width: 250px;
-  margin: 20px auto;
+  margin: 5em auto;
   background-color: #f8f8f8;
   transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
 }
 @media(min-width:750px){
   .work-card{
     float: left;
-    margin: 20px 20px;
+    margin: 2.5em 2.5em;
   }
 }
 .work-card:hover{
@@ -184,6 +187,9 @@ footer a:last-child{
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
   z-index: 2;
+}
+.wc-p:hover{
+  box-shadow: 0 0 40px 40px rgba(254,255,102,0.5);
 }
 .work-img{
   padding: 10px;
