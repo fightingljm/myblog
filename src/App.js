@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
+
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
 import Header from './components/Header.js'
 import Footer from './components/Footer.js'
@@ -34,6 +36,9 @@ class App extends React.Component {
             this.props.router.isActive('/about') ? 'About Me' : 'Article'
     })
   }
+  getChildContext() {
+    return {muiTheme: getMuiTheme()};
+  }
   render () {
     // console.log(this.state.title);
     return(
@@ -46,6 +51,10 @@ class App extends React.Component {
       </div>
     )
   }
+}
+
+App.childContextTypes = {
+  muiTheme: PropTypes.object.isRequired,
 }
 
 export default App;

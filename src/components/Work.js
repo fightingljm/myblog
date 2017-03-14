@@ -14,7 +14,7 @@ class Work extends React.Component {
   }
   render(){
     return(
-      <div style={{width:'100%'}}>
+      <div style={{width:'100%'}} className='work-warp'>
         <div className='work-card'>
           <div className='work-img' style={{backgroundImage: `url(${img1})`}}></div>
           <div className='work-title'>

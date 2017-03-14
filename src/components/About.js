@@ -54,9 +54,19 @@ class About extends React.Component {
             </CardActions>
           </Card>
         </MuiThemeProvider> */}
-        <Message/>
-        <Project/>
-        <Self/>
+
+        <div className='about-warp-header'>个 人 简 历</div>
+        <div className='about-warp-mid'>
+          <div className='about-card'>
+            <Message/>
+          </div>
+          <div className='about-card'>
+            <Project/>
+          </div>
+          <div className='about-card'>
+            <Self/>
+          </div>
+        </div>
       </div>
     )
   }
