@@ -24,14 +24,22 @@ class Post extends React.Component {
       .then(res => this.setState({data:res.data}))
   }
   render(){
+    let styles={
+      circle:{
+        textAlign:'center',
+        margin:'30px auto'
+      }
+    }
     return(
       <div style={{width:'100%'}}>
         {/* {this.props.params.title} */}
         {
           this.state.data.length==0 ?
-          <MuiThemeProvider>
-            <CircularProgress size={60} thickness={7} />
-          </MuiThemeProvider> :
+          <div style={styles.circle}>
+            <MuiThemeProvider>
+              <CircularProgress size={60} thickness={7} />
+            </MuiThemeProvider>
+          </div> :
           <div dangerouslySetInnerHTML={{__html:marked(this.state.data)}} className='post-content'></div>
         }
       </div>

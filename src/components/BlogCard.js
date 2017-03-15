@@ -2,44 +2,51 @@ import React from 'react';
 
 class BlogCard extends React.Component {
   handlePush(){
-    let address = `/blog/${this.props.url}`;
+    let address = `post/${this.props.url}`;
     this.context.router.push(address);
   }
   render () {
     let styles={
       root:{
         width:'100%',
-        height:'90px',
-        marginBottom:'15px'
+        height:'5em',
+        margin:'2em',
+        display:'flex'
       },
       left:{
-        float:'left',
+        flexShrink:'0',
+        width:'14%',
         color:'#fff',
         backgroundColor:'#00BCD4',
-        lineHeight:'90px',
+        lineHeight:'3.5em',
         textAlign:'center',
-        width:'12%',
         fontSize:'24px',
-        fontWeight:'700'
+        fontWeight:'600',
+        fontFamily:'arial',
+        fontStyle: 'italic'
       },
       right:{
-        float:'left',
+        width:'80%',
         paddingLeft:'20px',
         color:'#777'
       },
-      h3:{
-        lineHeight:'56px'
+      p1:{
+        fontSize:'15px',
+        color:'#888',
       },
-      p:{
-        opacity:'0.8'
+      p2:{
+        fontSize:'13px',
+        color:'#ccc',
+        float:'right'
       }
     }
     return(
-        <div style={styles.root} className="card" onClick={this.handlePush.bind(this)}>
+        <div style={styles.root} className="blog-card" onClick={this.handlePush.bind(this)}>
           <div style={styles.left}>{this.props.index}</div>
           <div style={styles.right}>
-            <h3 style={styles.h3}>{this.props.title}</h3>
-            <p style={styles.p}>{this.props.date}</p>
+            <h3>{this.props.title}</h3>
+            <p style={styles.p1}>{this.props.desc}</p>
+            <p style={styles.p2}>{this.props.date}</p>
           </div>
         </div>
     )
