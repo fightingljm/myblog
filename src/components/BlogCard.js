@@ -7,12 +7,6 @@ class BlogCard extends React.Component {
   }
   render () {
     let styles={
-      root:{
-        width:'100%',
-        height:'5em',
-        margin:'2em',
-        display:'flex'
-      },
       left:{
         flexShrink:'0',
         width:'14%',

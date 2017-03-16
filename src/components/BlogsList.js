@@ -42,18 +42,13 @@ class BlogsList extends React.Component {
     }
 
     let styles={
-      root:{
-        maxWidth:'60%',
-        padding:'3em 0',
-        margin:'0 auto',
-      },
       circle:{
         textAlign:'center',
         margin:'10em auto'
       }
     }
     return(
-      <div style={styles.root}>
+      <div className='blogList-root'>
         {this.state.wait ?
           <div style={styles.circle}>
             <MuiThemeProvider>
