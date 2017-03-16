@@ -1,6 +1,6 @@
 [
-  {"title":"第一篇文章","date":"2017.03.03","img":"https://fightingljm.github.io/images/css-framework.svg","url":"forth"},
-  {"title":"第二篇文章","date":"2017.03.03","img":"https://fightingljm.github.io/images/get-started.jpg","url":"forth"},
-  {"title":"第三篇文章","date":"2017.03.03","img":"https://fightingljm.github.io/images/components.svg","url":"forth"},
-  {"title":"第四篇文章","date":"2017.03.03","img":"https://fightingljm.github.io/images/get-started.svg","url":"forth"}
+  {"title":"第一篇文章","date":"2017.03.03","img":"https://fightingljm.github.io/images/css-framework.svg","url":"1"},
+  {"title":"第二篇文章","date":"2017.03.03","img":"https://fightingljm.github.io/images/get-started.jpg","url":"2"},
+  {"title":"第三篇文章","date":"2017.03.03","img":"https://fightingljm.github.io/images/components.svg","url":"3"},
+  {"title":"第四篇文章","date":"2017.03.03","img":"https://fightingljm.github.io/images/get-started.svg","url":"4"}
 ]
