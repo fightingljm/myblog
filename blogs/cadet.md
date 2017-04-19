@@ -4,7 +4,7 @@
 
 其实我不想说今天已经是四月十九号,我已经实习了一周零三天,我的 GitHub 也已经失宠好长时间.这期间我并没有闲着
 
-![contributions](http://github.com/fightingljm/myblog/contributions.png)
+![contributions](https://github.com/fightingljm/myblog/blob/master/src/image/contributions.png?raw=true)
 
 上面这张图就可以知道我很久不来github了 , (⊙o⊙)…(⊙o⊙)…(⊙o⊙)… ,
 
