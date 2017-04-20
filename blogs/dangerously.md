@@ -38,3 +38,12 @@ function createMarkup() { return {__html: 'First  &middot; Second'}; };
 - PC 端牛逼的 reducer 结构
 - ES7 新特性: **static** 静态方法 ;ES7装饰器 **Decorator** ;ES7 中使用 **async/await** 解决回调函数嵌套问题
 - 附加 : React Native
+
+现在是 2017.04.21 7:26AM  ,安利以上小目标的连接
+
+- [如何合理布置React/Redux的目录结构](https://github.com/asd0102433/blog/blob/master/%E5%89%8D%E7%AB%AF/file_structure_for_react.md)
+- [在Web应用中使用ES7装饰器 Decorator ](http://www.tuicool.com/articles/am2eQ3u)
+- [JavaScript ES7 中使用 async/await 解决回调函数嵌套问题](https://segmentfault.com/a/1190000002566697)
+- [ECMAScript 2016 (ES7) 新特性一览](https://www.w3ctech.com/topic/1614)
+- [JavaScript: 2016年回顾](http://www.css88.com/archives/tag/es7)
+- [async function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
