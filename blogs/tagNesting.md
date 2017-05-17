@@ -20,17 +20,17 @@
 
 - 块元素可以包含内联元素或某些块元素，但内联元素却不能包含块元素，它只能包含其它的内联元素：
 
-　　<div><h1></h1><p></p></div> —— 对 :heavy_check_mark:
+　　`<div><h1></h1><p></p></div>` —— 对 :heavy_check_mark:
 
-　　<a href=”#”><span></span></a> —— 对 :heavy_check_mark:
+　　`<a href=”#”><span></span></a>` —— 对 :heavy_check_mark:
 
-　　<span><div></div></span> —— 错 :heavy_multiplication_x:
+　　`<span><div></div></span>` —— 错 :heavy_multiplication_x:
 
 - 块级元素不能放在<p>里面：
 
-　　<p><ol><li></li></ol></p> —— 错 :heavy_multiplication_x:
+　　`<p><ol><li></li></ol></p>` —— 错 :heavy_multiplication_x:
 
-　　<p><div></div></p> —— 错 :heavy_multiplication_x:
+　　`<p><div></div></p>` —— 错 :heavy_multiplication_x:
 
 - 有几个特殊的块级元素只能包含内嵌元素，不能再包含块级元素，这几个特殊的标签是：
 
@@ -42,8 +42,8 @@
 
 - 块级元素与块级元素并列、内嵌元素与内嵌元素并列：
 
-　　<div><h2></h2><p></p></div> —— 对 :heavy_check_mark:
+　　`<div><h2></h2><p></p></div>` —— 对 :heavy_check_mark:
 
-　　<div><a href=”#”></a><span></span></div> —— 对 :heavy_check_mark:
+　　`<div><a href=”#”></a><span></span></div>` —— 对 :heavy_check_mark:
 
-　　<div><h2></h2><span></span></div> —— 错 :heavy_multiplication_x:
+　　`<div><h2></h2><span></span></div>` —— 错 :heavy_multiplication_x:
