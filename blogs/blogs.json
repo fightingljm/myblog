@@ -7,5 +7,6 @@
   {"title":"百日博客3 -- Object.assign()","desc":"Object.assign() 方法用于将所有可枚举的属性的值从一个或多个源对象复制到目标对象。它将返回目标对象。","date":"2017.04.22","url":"assign"},
   {"title":"百日博客4 -- A Beautiful MarkDown","desc":"Github MarkDown And Emoji","date":"2017.04.23","url":"lovemd"},
   {"title":"百日博客5 -- store action reducer redux-actions","desc":"来自一个渣渣的 react 项目使用 redux 时的困惑","date":"2017.04.23","url":"reduxTrouble"},
+  {"title":"百日博客6 -- HTML标签的嵌套规则","desc":"就是要记录一下这个垃圾的问题","date":"2017.05.17","url":"tagNesting"},
   {"title":"奋笔疾书ing...","desc":"未完待续...","date":"某年某月某日晴","url":"forth"}
 ]
