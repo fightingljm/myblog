@@ -9,5 +9,6 @@
   {"title":"百日博客5 -- store action reducer redux-actions","desc":"来自一个渣渣的 react 项目使用 redux 时的困惑","date":"2017.04.23","url":"reduxTrouble"},
   {"title":"百日博客6 -- HTML标签的嵌套规则","desc":"就是要记录一下这个垃圾的问题","date":"2017.05.17","url":"tagNesting"},
   {"title":"百日博客7 -- 百度地图 API 定位","desc":"只记录一下 React 项目中个人第一次使用的经历，百度开发者中心...走你","date":"2017.05.18","url":"baiduMapsAPI"},
+  {"title":"百日博客8 -- CSS 超出部分省略号 单行,多行,模糊","desc":"单行文本超出部分省略号再熟悉不过，拓展延伸一下多行文本超出省略号以及模糊显示","date":"2017.05.22","url":"textOverflowEllipsis"},
   {"title":"奋笔疾书ing...","desc":"未完待续...","date":"某年某月某日晴","url":"forth"}
 ]
