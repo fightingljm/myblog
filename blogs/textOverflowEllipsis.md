@@ -37,8 +37,7 @@
 
 因使用了WebKit的CSS扩展属性，该方法适用于WebKit浏览器及移动端；
 
->
--webkit-line-clamp用来限制在一个块元素显示的文本的行数。 为了实现该效果，它需要组合其他的WebKit属性。常见结合属性：
+>注意： -webkit-line-clamp用来限制在一个块元素显示的文本的行数。 为了实现该效果，它需要组合其他的WebKit属性。常见结合属性：
 display: -webkit-box; 必须结合的属性 ，将对象作为弹性伸缩盒子模型显示 。
 -webkit-box-orient 必须结合的属性 ，设置或检索伸缩盒对象的子元素的排列方式 。
 
@@ -72,7 +71,6 @@ p::after{
 
 该方法适用范围广，但文字未超出行的情况下也会出现省略号,可结合js优化该方法。
 
->
-将height设置为line-height的整数倍，防止超出的文字露出。
+>注意： 将height设置为line-height的整数倍，防止超出的文字露出。
 给p::after添加渐变背景可避免文字只显示一半。
 由于ie6-7不显示content内容，所以要添加标签兼容ie6-7（如：<span>…<span/>）；兼容ie8需要将::after替换成:after。
