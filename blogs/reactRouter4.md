@@ -159,3 +159,162 @@ class App extends React.Component {
 
 export default App;
 ```
+
+**url 参数**
+
+把 URL 中动态的部分作为参数，传递到组件中备用。
+
+```js
+import React from 'react'
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom'
+
+const Video = ({match}) => (
+  <h1>{match.params.id}</h1>
+)
+
+const App = () => (
+  <Router>
+    <div>
+      <ul>
+        <li><Link to="/v/1-git">1-git</Link></li>
+        <li><Link to="/v/2-react">2-react</Link></li>
+      </ul>
+      <Route path='/v/:id' component={Video} />
+    </div>
+  </Router>
+)
+
+export default App;
+```
+
+**match.url 来实现嵌套 Link**
+
+```js
+import React from 'react'
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom'
+
+const Home = () => (
+  <h1>Home</h1>
+)
+const Item = ({match}) => (
+  <h1>{match.params.item}</h1>
+)
+const About = ({match}) => (
+  <Router>
+    <div>
+      <ul>
+        <li><Link to={`${match.url}/me`}>aboutMe</Link></li>
+        <li><Link to={`${match.url}/work`}>aboutWork</Link></li>
+      </ul>
+      <Route path={`${match.url}/:item`} component={Item} />
+    </div>
+  </Router>
+)
+
+const App = () => (
+  <Router>
+    <div>
+      <ul>
+        <li><Link to='/'>home</Link></li>
+        <li><Link to='/change'>about</Link></li>
+      </ul>
+      <Route exact path='/' component={Home} />
+      <Route path='/change' component={About} />
+    </div>
+  </Router>
+)
+
+export default App;
+```
+
+**Not Match(404)**
+
+```js
+import React from 'react'
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch
+} from 'react-router-dom'
+
+const Home = () => (
+  <h1>Home</h1>
+)
+
+const About = () => (
+  <h1>About</h1>
+)
+
+const NotFound = () => (
+  <h1>404</h1>
+)
+
+const App = () => (
+  <Router>
+    <Switch>
+      <Route exact path='/' component={Home}/>
+      <Route path='/about' component={About}/>
+      <Route component={NotFound}/>
+    </Switch>
+  </Router>
+)
+
+export default App
+```
+
+**Switch 组件的作用**
+
+React Router 区别于其他语言框架下的 router 的一大特点就是一个 url 可以出发多个 Route ，同时显示多个 component 。这个让 React Router 实现 sidebar 等一些功能的时候变得非常方便。但是有些时候，也会造成一些麻烦。这时候，我们就要使用上 Switch 组件
+
+它的作用就是，如果有多个 Route 都可以配对上 url ，那么只去触发第一个 Route
+
+拿栗子来说话
+
+```js
+import React from 'react'
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Link
+} from 'react-router-dom'
+
+const Home = () => (
+  <h1>Home</h1>
+)
+
+const About = () => (
+  <h1>About</h1>
+)
+
+const User = ({match}) => (
+  <h1>Hello,{match.params.user}</h1>
+)
+
+const App = () => (
+  <Router>
+    <div>
+      <ul>
+        <li><Link to='/'>Home</Link></li>
+        <li><Link to='/about'>About</Link></li>
+        <li><Link to='/liujinmeng'>User</Link></li>
+      </ul>
+      <Switch>
+        <Route exact path='/' component={Home}/>
+        <Route path='/about' component={About}/>
+        <Route path='/:user' component={User}/>
+      </Switch>
+    </div>
+  </Router>
+)
+
+export default App
+```
