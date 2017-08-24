@@ -13,5 +13,6 @@
   {"title":"百日博客9 -- css3实现超出文本指定行数与省略号效果","desc":"超出文本指定行数","date":"2017.08.10","url":"lineClamp"},
   {"title":"百日博客10 -- Create-React-App创建antd-mobile开发环境","desc":"使用Create-React-App脚手架搭建antd-mobile的开发环境","date":"2017.08.10","url":"createReactApp"},
   {"title":"百日博客11 -- React Router 4","desc":"React Router 4 的使用方法","date":"2017.08.13","url":"reactRouter4"},
+  {"title":"百日博客12 -- 微信小程序开发(一)","desc":"动态修改页面标题","date":"2017.08.24","url":"wechatAppTitle"},
   {"title":"奋笔疾书ing...","desc":"未完待续...","date":"某年某月某日晴","url":"forth"}
 ]
