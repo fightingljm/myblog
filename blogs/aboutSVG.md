@@ -21,7 +21,7 @@
 缺点：不允许使用脚本。
 
 
-**使用 <iframe> 标签**
+**使用 `<iframe>` 标签**
 
 语法：`<iframe src="test.svg"></iframe>`
 
