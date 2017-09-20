@@ -9,24 +9,27 @@
 
 语法：`<embed src="test.svg" type="image/svg+xml" />`
 
->优势：所有主要浏览器都支持，并允许使用脚本
-缺点：不推荐在HTML4和XHTML中使用（但在HTML5允许）
+>
+- 优势：所有主要浏览器都支持，并允许使用脚本
+- 缺点：不推荐在HTML4和XHTML中使用（但在HTML5允许）
 
 
 **使用 <object> 标签**
 
 语法：`<object data="test.svg" type="image/svg+xml"></object>`
 
->优势：所有主要浏览器都支持，并支持HTML4，XHTML和HTML5标准
-缺点：不允许使用脚本。
+>
+- 优势：所有主要浏览器都支持，并支持HTML4，XHTML和HTML5标准
+- 缺点：不允许使用脚本。
 
 
 **使用 `<iframe>` 标签**
 
 语法：`<iframe src="test.svg"></iframe>`
 
->优势：所有主要浏览器都支持，并允许使用脚本
-缺点：不推荐在HTML4和XHTML中使用（但在HTML5允许）
+>
+- 优势：所有主要浏览器都支持，并允许使用脚本
+- 缺点：不推荐在HTML4和XHTML中使用（但在HTML5允许）
 
 
 **直接在HTML嵌入SVG代码**
