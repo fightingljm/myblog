@@ -2,8 +2,8 @@
 
 2017年9月20日
 
-- SVG 文件可通过以下标签嵌入 HTML 文档：<embed>、<object> 或者 <iframe>。
-- SVG的代码可以直接嵌入到HTML页面中，或您可以直接链接到SVG文件。
+- `SVG 文件可通过以下标签嵌入 HTML 文档：<embed>、<object> 或者 <iframe>。`
+- `SVG的代码可以直接嵌入到HTML页面中，或您可以直接链接到SVG文件。`
 
 **使用 <embed> 标签**
 
