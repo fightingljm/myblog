@@ -17,5 +17,6 @@
   {"title":"百日博客13 -- 关于svg","desc":"svg图标不能用img标签","date":"2017.09.20","url":"aboutSVG"},
   {"title":"百日博客14 -- momentJS","desc":"JavaScript 日期处理类库","date":"2017.11.28","url":"momentJS"},
   {"title":"百日博客15 -- 商品SKU","desc":"电商后台管理商品规格","date":"2017.11.29","url":"goodsSKU"},
+  {"title":"百日博客16 -- Array对象","desc":"数组对象的一些方法","date":"2017.11.29","url":"arrayObj"},
   {"title":"奋笔疾书ing...","desc":"未完待续...","date":"某年某月某日晴","url":"forth"}
 ]

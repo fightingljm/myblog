@@ -85,3 +85,6 @@
 - [微盟-智能商业服务提供商](http://www.weimob.com/website/index.html)
 - [Worktile-更好的企业协作平台](https://worktile.com/)
 - [EC+ 到家-同城上门O2O解决方案](http://demodaojia.ecjia.com/index.php)
+
+
+商品SKU的时候，熟悉了很多数组对象的方法，[点我查看]()
