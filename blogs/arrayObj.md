@@ -1,5 +1,23 @@
 ### 数组对象的一些方法
 
+**数组对象排序**
+
+```js
+var arr = [{name: "zlw", age: 24}, {name: "wlz", age: 25}];
+var compare = function (obj1, obj2) {
+    var val1 = obj1.name;
+    var val2 = obj2.name;
+    if (val1 < val2) {
+        return -1;
+    } else if (val1 > val2) {
+        return 1;
+    } else {
+        return 0;
+    }            
+}
+console.log(arr.sort(compare));
+```
+
 **JavaScript获取两个数组交集的方法**
 
 ```js
@@ -15,8 +33,7 @@
  * Should have O(n) operations, where n is
  *  n = MIN(a.length(), b.length())
  */
-function arrayIntersection(a, b)
-{
+function arrayIntersection(a, b){
  var ai=0, bi=0;
  var result = new Array();
  while( ai < a.length && bi < b.length )
@@ -34,6 +51,63 @@ function arrayIntersection(a, b)
 }
 console.log(arrayIntersection([1,2,3],[2,3,4,5,6]));//[2,3]
 ```
+
+输出结果为 `[Object { name="wlz", age=25}, Object { name="zlw", age=24}]` ，可以看到数组已经按照 `name` 属性进行了排序。我们可以对上面的比较函数再改造一下：
+
+```js
+var compare = function (prop) {
+    return function (obj1, obj2) {
+        var val1 = obj1[prop];
+        var val2 = obj2[prop];if (val1 < val2) {
+            return -1;
+        } else if (val1 > val2) {
+            return 1;
+        } else {
+            return 0;
+        }            
+    }
+}
+```
+
+如果想按照 `age` 进行排序， `arr.sort(compare("age"))` 即可。
+
+但是对 age 属性进行排序时需要注意了，如果age属性的值是数字，那么排序结果会是我们想要的。但很多时候我们从服务器传回来的数据中，属性值通常是字符串。现在我把上面的数组改为：
+
+`var arr = [{name: "zlw", age: "24"}, {name: "wlz", age: "5"}];`
+
+可以看到，我把 `age` 属性由数字改为了字符串，第二个数组项的 `age` 值改为了 `"5"` 。再次调用 `arr.sort(compare("age"))` 后，结果为：
+
+`[Object { name="zlw", age="24"}, Object { name="wlz", age="5"}]`
+
+我们的期望是5排在25前面，但是结果不是。这是因为当两个数字字符串比较大小时，会比较它们的ASCII值大小，比较规则是：从第一个字符开始，顺次向后直到出现不同的字符为止，然后以第一个不同的字符的ASCII值确定大小。所以"24"与"5"比较大小时，先比较”2“与"5"的ASCII值，显然”2“的ASCII值比"5"小，即确定排序顺序。
+
+现在，我们需要对比较函数再做一些修改：
+
+```js
+var compare = function (prop) {
+    return function (obj1, obj2) {
+        var val1 = obj1[prop];
+        var val2 = obj2[prop];
+        if (!isNaN(Number(val1)) && !isNaN(Number(val2))) {
+            val1 = Number(val1);
+            val2 = Number(val2);
+        }
+        if (val1 < val2) {
+            return -1;
+        } else if (val1 > val2) {
+            return 1;
+        } else {
+            return 0;
+        }            
+    }
+}
+```
+
+在比较函数中，先把比较属性值转化为数字 `Number(val1)` 再通过 `!isNaN(Number(val1))` 判断转化后的值是不是数字(有可能是NaN)，转化后的值如果是数字，则比较转换后的值，这样就可以得到我们想要的结果了， 调用 `arr.sort(compare("age"))` 得到：
+
+`[Object { name="wlz", age="5"}, Object { name="zlw", age="24"}]`
+
+可以看到，确实是按正确的方式排序了。
 
 **javascript对象数组如何快速找出存储的某个对象**
 

@@ -19,5 +19,6 @@
     {"title":"百日博客15 -- 商品SKU","desc":"电商后台管理商品规格","date":"2017.11.29","url":"goodsSKU"},
     {"title":"百日博客16 -- Array对象","desc":"数组对象的一些方法","date":"2017.11.29","url":"arrayObj"},
     {"title":"百日博客17 -- GitLab","desc":"GitLab 上把新的 commits 使用在自己的 fork 上","date":"2018.01.18","url":"gitlab"},
+    {"title":"百日博客18 -- git","desc":"有关git的一些方法","date":"2018.01.23","url":"git"},
     {"title":"奋笔疾书ing...","desc":"未完待续...","date":"某年某月某日晴","url":"forth"}
 ]
