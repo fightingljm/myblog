@@ -21,7 +21,7 @@ git clone 只能 clone远程库的 master 分支，无法 clone 所有分支，�
   remotes/origin/master
 ```
 
-<!-- gitBranch -->
+![gitBranch](https://github.com/fightingljm/myblog/blob/master/src/image/gitBranch.png?raw=true)
 
 - git checkout -b dev origin/dev
 
