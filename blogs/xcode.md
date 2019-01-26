@@ -38,3 +38,29 @@
 
   然后再尝试build，应该就可以启动了。
 
+- 彻底解决_OBJC_CLASS_$_某文件名", referenced from:问题
+
+  >1、.m文件没有导入，在Build Phases里的Compile Sources 中添加报错的文件
+
+  ![image-20190126145216313](../src/image/image-20190126145216313.png)
+
+  > 2、.framework文件没有导入，静态库编译时往往需要一些库的支持，查看你是否有没有导入的库文件
+  > 是在Build Phases里的Link Binary With Libraries中添加，同上
+
+  >3、重复编译，可能你之前复制过两个地方，在这里添加过两次，删除时系统没有默认删除编译引用地址
+  >在Build Settings里搜索Search Paths  将里面Library Search Paths 中没有用到的地址删除
+
+  >4、最后一个问题，出在静态库生成上面。系统编译生成的静态库有两个，一个真机调用的，一个模拟器调用的。
+  >当你在真机测试时导入模拟器静态库，运行就会报错；同样在模拟器测试时调用真机静态库也会报错。
+  >
+  >解决这一问题也很简单，就是将两个静态库合并，生成一个兼容的静态库。
+  >
+  >通过Show in finder 找到两个静态库文件，将两个文件复制到一个文件夹里，当然要进行重命名啦，否则就覆盖了。
+  >下面打开终端，CD到存放两个文件的文件夹。
+  >
+  >通过lipo[空格]-create[空格] [真机静态库文件名] [空格] [模拟器静态库文件名] [空格]-output[空格] [合并后的文件名]
+  >
+  >```bash
+  >$ lipo -create zhenji.a moniqi.a -output project.a
+  >```
+
