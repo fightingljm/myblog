@@ -1,5 +1,16 @@
 ### git
 
+**新建分支**
+
+```bash
+# 新建一个本地分支
+$ git checkout -b v2
+# 把新建的本地分支push到远程服务器，我这次的提交，远程分支与本地分支同名
+$ git push origin v2:v2
+```
+
+
+
 **git 切换远程分支**
 
 git clone 只能 clone远程库的 master 分支，无法 clone 所有分支，解决办法如下：
