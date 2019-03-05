@@ -11,6 +11,16 @@
   >5. Run `make install`
   >6. Open **Xcode** and try building the Project.
 
+- No member named '__rip' in '__darwin_arm_thread_state'
+
+  ```c
+  // return(void*)context->PC_FROM_UCONTEXT;
+  改成
+  return NULL;
+  ```
+
+  
+
 - React Native iOS使用Xcode打开，卡在Running custom shell scripts "install third party"
 
   一般这种问题基本上可以定位为网络问题。 主要是下面四个文件没下载完成：
