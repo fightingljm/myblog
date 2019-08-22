@@ -11,6 +11,19 @@ $ git push origin v2:v2
 
 
 
+**删除分支**
+
+```bash
+# 删除本地分支
+$ git branch -D 要删除的分支名称
+# 删除远程分支
+$ git push origin --delete 要删除的分支名称
+```
+
+![branch-D](https://github.com/fightingljm/myblog/blob/master/src/image/branch-D.jpg?raw=true)
+
+
+
 **git 切换远程分支**
 
 git clone 只能 clone远程库的 master 分支，无法 clone 所有分支，解决办法如下：
