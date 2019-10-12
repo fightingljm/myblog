@@ -1,6 +1,6 @@
 ### Moment.js -- JavaScript 日期处理类库
 
-- [安利官网](http://momentjs.cn/docs/)
+- [官网](http://momentjs.cn/docs/)
 
 就像 官网 所说，Moment.js -- JavaScript 日期处理类库，好用X3
 

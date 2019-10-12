@@ -1,7 +1,5 @@
 ## react native 友盟统计 Android 端集成
 
-
-
 ### 步骤
 
 - sdk的集成

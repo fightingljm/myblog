@@ -1,6 +1,4 @@
-### 百日博客4 -- Redux Trouble
-
-2017.04.23 周日 天津 阵雨~然而我没出门
+### Redux
 
 周五的时候对自己正在开发的 react 电商项目发出一个疑惑,在这个项目中使用 redux 时, store action reducer 这三个小玩意儿我先写哪一个呢 :question:
 

@@ -1,7 +1,6 @@
 ### Xcode 开发中遇到的问题及解决方法
 
 
-
 - Undefined symbols for architecture x86_64编译错误
 
   > 1.大部分情况下是因为忘记添加系统某些库文件或自定义类文件导致的，解决方法是添加对应的文件即可，如果缺少自定义文件 `_OBJC_CLASS_$_`后面跟的是类名，那么到 compile sources 中添加缺省文件：TARGETS -- Build Phases -- Compile Sources ；若缺少类库，则到 Link Binary With Libraries 中加入对应类库即可：

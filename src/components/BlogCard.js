@@ -22,7 +22,10 @@ class BlogCard extends React.Component {
 			right: {
 				width: '80%',
 				paddingLeft: '20px',
-				color: '#777'
+				color: '#777',
+				display: 'flex',
+				flexDirection: 'column',
+				justifyContent: 'center',
 			},
 			p1: {
 				fontSize: '15px',
@@ -40,7 +43,6 @@ class BlogCard extends React.Component {
 				<div style={styles.right}>
 					<h3>{this.props.title}</h3>
 					<p style={styles.p1}>{this.props.desc}</p>
-					<p style={styles.p2}>{this.props.date}</p>
 				</div>
 			</div>
 		)
@@ -50,14 +52,12 @@ class BlogCard extends React.Component {
 BlogCard.defaultProps = {
 	index: 1,
 	title: '这里是标题',
-	date: '2016.7.24',
 	url: ''
 };
 
 BlogCard.propTypes = {
 	index: React.PropTypes.number.isRequired,
 	title: React.PropTypes.string.isRequired,
-	date: React.PropTypes.string.isRequired,
 	url: React.PropTypes.string.isRequired,
 };
 BlogCard.contextTypes = {

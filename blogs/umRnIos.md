@@ -1,7 +1,5 @@
 ## react native 友盟统计 IOS 端集成
 
-
-
 ### 步骤
 
 - ios端的sdk集成

@@ -1,7 +1,5 @@
 ### SVG 能不能用 img 标签
 
-2017年9月20日
-
 - `SVG 文件可通过以下标签嵌入 HTML 文档：<embed>、<object> 或者 <iframe>。`
 - `SVG的代码可以直接嵌入到HTML页面中，或您可以直接链接到SVG文件。`
 

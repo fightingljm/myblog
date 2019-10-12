@@ -1,9 +1,7 @@
 ### React Router 4 的使用方法
 
-2017年8月13日 阵雨&海上大风蓝色预警
-
-- 还是安利最重要的 [官网](https://reacttraining.com/react-router/)
-- 还有我强势走来的 [Github](https://github.com/fightingljm/reactRouter4)
+- [官网](https://reacttraining.com/react-router/)
+- [Github](https://github.com/fightingljm/reactRouter4)
 
 **简单开始一个栗子**
 

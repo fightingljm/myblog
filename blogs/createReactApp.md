@@ -1,8 +1,4 @@
-### 百日博客9 -- Create-React-App创建antd-mobile开发环境
-
-2017.08.10 天津 晴 高温补贴
-
-前几天煊赫和我提起 Create-React-App 这个神造物，今天决定试一下。。。
+### 使用 Create-React-App 创建 antd-mobile开发环境
 
 **Create-React-App**
 
@@ -89,7 +85,7 @@ start.js脚本启动了dev-server, 这里需要了解的是
 ```js
   function addMiddleware(devServer){
     ... ...
-    这个函数调用http-proxy-middleware模块，将代理请求，代理地址在package.json中添加
+    // 这个函数调用http-proxy-middleware模块，将代理请求，代理地址在package.json中添加
   }
 ```
 
@@ -228,7 +224,3 @@ antd-mobile的web版的文件后缀为.web.js ...
 ```
 
 到这里，就算搭建完开发环境了，可以正常进行开发了。
-
-END
-
-[参考](http://www.jianshu.com/p/5e6c620ff4d6)

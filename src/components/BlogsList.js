@@ -30,13 +30,29 @@ class BlogsList extends React.Component {
 		var blogCards = [];
 		if (this.props.search == '') {
 			this.state.posts.map((item, index) => {
-				blogCards.push(<BlogCard title={item.title} date={item.date} desc={item.desc} index={index + 1} key={Math.random()} url={item.url} />)
+				blogCards.push(
+					<BlogCard
+						title={item.title}
+						desc={item.desc}
+						index={index + 1}
+						key={Math.random()}
+						url={item.url}
+					/>
+				)
 			});
 		} else {
 			for (var i = 0; i < this.state.posts.length; i++) {
 				let thisPost = this.state.posts[i];
 				if (thisPost.title.indexOf(this.props.search) != -1) {
-					blogCards.push(<BlogCard title={thisPost.title} date={thisPost.date} desc={thisPost.desc} index={i + 1} key={Math.random()} url={thisPost.url} />)
+					blogCards.push(
+						<BlogCard
+							title={thisPost.title}
+							desc={thisPost.desc}
+							index={i + 1}
+							key={Math.random()}
+							url={thisPost.url}
+						/>
+					)
 				}
 			}
 		}
@@ -49,15 +65,17 @@ class BlogsList extends React.Component {
 		}
 		return (
 			<div className='blogList-root'>
-				{this.state.wait ?
-					<div style={styles.circle}>
+				{
+					this.state.wait
+					? <div style={styles.circle}>
 						<MuiThemeProvider>
 							<CircularProgress size={60} thickness={7} />
 						</MuiThemeProvider>
-					</div> :
-					''
+					</div> : ''
 				}
-				{blogCards}
+				{
+					blogCards
+				}
 			</div>
 		)
 	}
