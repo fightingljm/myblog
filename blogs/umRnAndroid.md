@@ -25,7 +25,7 @@
 
 把jar包添加到工程中
 
-```
+```java
 // android/app/build.gradle
 dependencies {
     ...
@@ -155,7 +155,7 @@ ok基本上按照步骤走的话，都很顺利，到这里就可以RN端调用�
 
 这里封装了一下 umtj.js 可作为参考
 
-```javascript
+```js
 import { NativeModules } from 'react-native';
 
 const UMTJ = NativeModules.UMAnalyticsModule;
@@ -180,7 +180,7 @@ export const onEventWithLable = (eventId, label) => {
 
 调用原生模块
 
-```javascript
+```js
 import {
     onEvent,
     onEventWithLable,

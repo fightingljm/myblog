@@ -16,7 +16,7 @@
 
 **实现方法：**
 
-```
+```css
   overflow: hidden;
   text-overflow:ellipsis;
   white-space: nowrap;
@@ -34,7 +34,7 @@
 
 **实现方法：**
 
-```
+```css
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
@@ -57,7 +57,7 @@ display: -webkit-box; 必须结合的属性 ，将对象作为弹性伸缩盒子
 
 **实现方法：**
 
-```
+```css
 p{
   position: relative;
   line-height: 20px;

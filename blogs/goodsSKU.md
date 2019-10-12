@@ -2,7 +2,7 @@
 
 在处理 fashop 后台商品 SKU 管理的时候遇到问题，启发于这段代码
 
-```js
+```html
 <!DOCTYPE html>  
 <html>  
     <head>  

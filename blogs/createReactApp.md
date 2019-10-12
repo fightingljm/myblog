@@ -38,7 +38,7 @@ Baby Go!
 
 再查看 myapp 文件夹，可以看到完整的项目结构：
 
-```bash
+```js
 myapp/
     node_modules/
     package.json     /--------主要配置文件--------/
@@ -111,7 +111,7 @@ Facebook官方在create-react-app升级到某一版本，突然丢掉了默认�
 
 - 命令行，在当前目录执行：
 
-```hash
+```bash
  $ npm install sass-loader node-sass --save-dev
 ```
 

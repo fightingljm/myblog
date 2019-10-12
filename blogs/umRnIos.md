@@ -66,7 +66,7 @@ OK 原生部分已经完成
 
 这里封装了一下 umtj.js 可作为参考
 
-```javascript
+```js
 import { NativeModules } from 'react-native';
 
 const UMTJ = NativeModules.UMAnalyticsModule;
@@ -91,7 +91,7 @@ export const onEventWithLable = (eventId, label) => {
 
 调用原生模块
 
-```javascript
+```js
 import {
     onEvent,
     onEventWithLable,

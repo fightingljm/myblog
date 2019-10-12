@@ -34,7 +34,7 @@ git 默认不区分文件名大小写，用下面命令配置严格区分大小�
 
 ```bash
 
-git config core.ignorecase false
+$ git config core.ignorecase false
 
 ```
 
@@ -42,20 +42,24 @@ git config core.ignorecase false
 #### 新建分支
 
 ```bash
+
 # 新建一个本地分支
 $ git checkout -b v2
 # 把新建的本地分支push到远程服务器，我这次的提交，远程分支与本地分支同名
 $ git push origin v2:v2
+
 ```
 
 
 #### 删除分支
 
 ```bash
+
 # 删除本地分支
 $ git branch -D 要删除的分支名称
 # 删除远程分支
 $ git push origin --delete 要删除的分支名称
+
 ```
 
 ![branch-D](https://github.com/fightingljm/myblog/blob/master/src/image/branch-D.jpg?raw=true)
@@ -74,12 +78,14 @@ git clone 只能 clone远程库的 master 分支，无法 clone 所有分支，�
 
 >列出所有分支名称如下：
 
-```
+```bash
+
 * 0.1.0
   master
   remotes/origin/0.1.0
   remotes/origin/HEAD -> origin/master
   remotes/origin/master
+  
 ```
 
 ![gitBranch](https://github.com/fightingljm/myblog/blob/master/src/image/gitBranch.png?raw=true)
@@ -104,17 +110,21 @@ git clone 只能 clone远程库的 master 分支，无法 clone 所有分支，�
 - 还未将变更从工作区加入到暂存区，即未执行`git add` 命令前，可以使用`git checkout`命令来撤销修改
 
   ```bash
-  git checkout -- a.scss b.scss
-  git checkout -- *.css
-  git checkout -- *
+
+  $ git checkout -- a.scss b.scss
+  $ git checkout -- *.css
+  $ git checkout -- *
+
   ```
 
 - 已将变更加入到暂存区，即已经执行了`git add`命令，可以使用`git reset`命令来撤销修改
 
   ```bash
-  git reset HEAD a.scss b.scss
-  git reset HEAD *.scss
-  git reset HEAD  *
+
+  $ git reset HEAD a.scss b.scss
+  $ git reset HEAD *.scss
+  $ git reset HEAD  *
+
   ```
 
   > 执行以上命令后，**本地的修改并不会消失，而只是从暂存区回到了工作区**，即第一种情况下所示的状态。继续用第一种情况下的操作，就可以放弃本地的修改
@@ -123,13 +133,13 @@ git clone 只能 clone远程库的 master 分支，无法 clone 所有分支，�
 
   ```bash
   #回退到上一个版本
-  git reset --hard HEAD^  
+  $ git reset --hard HEAD^  
   #回退到上上次版本
-  git reset --hard HEAD^^
-  git reset --hard HEAD^^^
+  $ git reset --hard HEAD^^
+  $ git reset --hard HEAD^^^
   
   #回退到指定commitid的版本
-  git reset --hard  commit_id
+  $ git reset --hard  commit_id
   ```
 
   > 可以使用 `git log` 或 `git reflog` 命令来查看git的提交历史，获取commit_id.
@@ -145,38 +155,48 @@ git clone 只能 clone远程库的 master 分支，无法 clone 所有分支，�
 使用以下命令来配置。
 
 ```bash
-➜ git remote add upstream git@gitlab.zoo.cn:wolf/fork-demo.git
+
+$ git remote add upstream git@gitlab.zoo.cn:wolf/fork-demo.git
+
 ```
 
 然后可以查看一下配置状况，很好，上游项目的地址已经被加进来了。
 
 ```bash
-➜ git remote -v
+
+$ git remote -v
 origin  git@gitlab.zoo.cn:wolf_liu/test-demo.git (fetch)
 origin  git@gitlab.zoo.cn:wolf_liu/test-demo.git (push)
 upstream    git@gitlab.zoo.cn:wolf/fork-demo.git (fetch)
 upstream    git@gitlab.zoo.cn:wolf/fork-demo.git (push)
+
 ```
 
 #### 获取上游项目更新。
 使用 fetch 命令更新，fetch 后会被存储在一个本地分支 upstream/master 上。
 
 ```bash
-➜ git fetch upstream
+
+$ git fetch upstream
+
 ```
 
 #### 合并到本地分支。
 切换到 master 分支，合并 upstream/master 分支。
 
 ```bash
-➜ git merge upstream/master
+
+$ git merge upstream/master
+
 ```
 
 #### 提交推送。
 根据自己情况提交推送自己项目的代码。
 
 ```bash
-➜ git push origin master
+
+$ git push origin master
+
 ```
 
 由于项目已经配置了上游项目的地址，所以如果 fork 的项目再次更新，重复步骤 2、3、4即可。
@@ -188,12 +208,14 @@ upstream    git@gitlab.zoo.cn:wolf/fork-demo.git (push)
 
 提交信息包括三个部分：Header，Body 和 Footer。
 
-```
+```js
+
 <Header>
 
 <Body>
 
 <Footer>
+
 ```
 
 其中，Header 是必需的，Body 和 Footer 可以省略。
@@ -202,8 +224,10 @@ upstream    git@gitlab.zoo.cn:wolf/fork-demo.git (push)
 
 Header部分只有一行，包括俩个字段：type（必需）和subject（必需）。
 
-```
+```js
+
 <type>: <subject>
+
 ```
 
 ##### type
@@ -230,7 +254,7 @@ subject是 commit 目的的简短描述。
 
 Body 部分是对本次 commit 的详细描述，可以分成多行。下面是一个范例。
 
-```
+```markdown
 More detailed explanatory text, if necessary.  Wrap it to 
 about 72 characters or so. 
 
@@ -253,14 +277,14 @@ Footer 部分只用于两种情况：
 
 本次提交如果和摸个issue有关系则需要写上这个，格式如下：
 
-```
+```markdown
 Issue #1, #2, #3
 ```
 ##### 关闭 Issue
 
 如果当前提交信息解决了某个issue，那么可以在 Footer 部分关闭这个 issue，关闭的格式如下：
 
-```
+```markdown
 Close #1, #2, #3
 ```
 
@@ -268,7 +292,7 @@ Close #1, #2, #3
 
 说了半天不给个例子都是瞎扯淡，下面是一个完整的例子：
 
-```
+```markdown
 feat: 添加了分享功能
 
 给每篇博文添加了分享功能

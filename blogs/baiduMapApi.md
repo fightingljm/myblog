@@ -35,7 +35,9 @@
 ps：其实 [百度地图的 API](http://lbsyun.baidu.com/index.php?title=jspopular/guide/helloworld) 已经写的很清楚了
 
 ```html
+
 <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=您的密钥"></script>
+
 ```
 
 
@@ -56,7 +58,9 @@ src="http://api.map.baidu.com/api?v=1.4&key=您的密钥&callback=initialize"
 - 因为我这里不需要显示地图，只需要拿到定位信息，所以容器高宽为零
 
 ```html
+
 <div style={{width:'0', height: '0'}} id='container'></div>
+
 ```
 
 ```js

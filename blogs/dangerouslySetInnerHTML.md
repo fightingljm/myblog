@@ -10,7 +10,7 @@
 
 在彻底的理解安全问题后果并正确地净化数据之后，生成只包含唯一 key `__html` 的对象，并且对象的值是净化后的数据。下面是一个使用 JSX 语法的栗子：
 
-```JSX
+```jsx
 
 function createMarkup() { return {__html: 'First  &middot; Second'}; };
 <div dangerouslySetInnerHTML={createMarkup()} />
@@ -68,7 +68,7 @@ console.log(HTMLDecode(encodeText)); //<p><b>123&456</b></p>
 
 场景 ：一个从后台那道的数据
 
-```js
+```json
 {
     "errcode": 0,
     "errmsg": "操作成功",
@@ -84,7 +84,7 @@ console.log(HTMLDecode(encodeText)); //<p><b>123&456</b></p>
 
 使 obj.data.body 显示在页面 ，解决办法 :seedling:
 
-```js
+```jsx
 import React from 'react';
 import { Tabs, Icon, Spin } from 'antd';
 

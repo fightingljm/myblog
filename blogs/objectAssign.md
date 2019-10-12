@@ -31,7 +31,7 @@ export default login
 
 #### 语法
 
-```
+```js
 Object.assign(target, ...sources)
 ```
 
