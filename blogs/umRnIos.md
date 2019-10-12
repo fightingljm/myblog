@@ -13,9 +13,9 @@
 
 解压后得到这些文件
 
-![image-20190127100218637](../src/image/image-20190127100218637.png)
+![um6](../src/image/um6.png)
 
-![image-20190127100301174](../src/image/image-20190127100301174.png)
+![um7](../src/image/um7.png)
 
 把这些解压后的framework 导入到工程
 
@@ -26,7 +26,7 @@ Step 1：Project-->Add Files to
 
 Step 2：
 
-![image-20190127100700859](../src/image/image-20190127100700859.png)
+![um8](../src/image/um8.png)
 
 把上面的包导入，完成集成部分。
 
@@ -34,11 +34,11 @@ Step 2：
 
 把官网下载下来解压后的react native 交互代码  拷贝到工程
 
-![image-20190127101017305](../src/image/image-20190127101017305.png)
+![um9](../src/image/um9.png)
 
 这四个OC文件
 
-![image-20190127101059930](../src/image/image-20190127101059930.png)
+![um10](../src/image/um10.png)
 
 ### 3. 工程的相关配置 sdk 的初始化
 

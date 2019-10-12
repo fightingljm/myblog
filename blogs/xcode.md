@@ -67,7 +67,7 @@
 
   >1、.m文件没有导入，在Build Phases里的Compile Sources 中添加报错的文件
 
-  ![image-20190126145216313](../src/image/image-20190126145216313.png)
+  ![xcode1](../src/image/xcode1.png)
 
   > 2、.framework文件没有导入，静态库编译时往往需要一些库的支持，查看你是否有没有导入的库文件
   > 是在Build Phases里的Link Binary With Libraries中添加，同上
