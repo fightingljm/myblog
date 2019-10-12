@@ -87,7 +87,7 @@ git clone 只能 clone远程库的 master 分支，无法 clone 所有分支，�
 
   ```bash
   #回退到上一个版本
-  git reset --hard HEAD^
+  git reset --hard HEAD^  
   #回退到上上次版本
   git reset --hard HEAD^^
   git reset --hard HEAD^^^
