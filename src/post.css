@@ -35,6 +35,9 @@
 }
 .post-content pre {
   background-color: #f8f8f8;
+  /* background-color: #262a2d; */
+  /* background-color: #043362; */
+  border-radius: 4px;
   display: block;
   padding: 20px;
   margin: 20px 0;

@@ -46,7 +46,7 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
-    "highlight.js": "^9.9.0",
+    "highlight.js": "^9.15.10",
     "marked": "^0.3.6",
     "material-ui": "^0.17.0",
     "react": "^15.3.1",
