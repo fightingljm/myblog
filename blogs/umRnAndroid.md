@@ -1,13 +1,8 @@
-## react native 友盟统计 Android 端集成
+[toc]
 
-### 步骤
+### react native 友盟统计 Android 端集成
 
-- sdk的集成
-- 原生模块的配置
-- 原生交互模块
-- RN端调用
-
-### sdk集成部分
+#### sdk集成部分
 
 [友盟sdk下载地址](https://developer.umeng.com/sdk/reactnative)
 
@@ -47,7 +42,7 @@ dependencies {
 
 到这里Android端sdk已经集成了。
 
-## android端配置
+#### android端配置
 
 ```xml
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
@@ -78,7 +73,7 @@ dependencies {
 </manifest>
 ```
 
-## 交互模块
+#### 交互模块
 
 接下来把官网下载下来的交互文件放到工程中，包括下面三个文件
 
@@ -148,7 +143,7 @@ protected void onPause() { //友盟统计初始化
 
 ok基本上按照步骤走的话，都很顺利，到这里就可以RN端调用了。
 
-## RN端调用
+#### RN端调用
 
 这里封装了一下 umtj.js 可作为参考
 

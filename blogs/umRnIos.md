@@ -1,13 +1,8 @@
-## react native 友盟统计 IOS 端集成
+[toc]
 
-### 步骤
+### react native 友盟统计 IOS 端集成
 
-- ios端的sdk集成
-- ios  和rn 的交互类
-- 工程的相关配置 （初始化sdk）
-- rn 端调用
-
-### 1.sdk 集成部分
+#### sdk 集成部分
 
 [友盟sdk下载地址](https://developer.umeng.com/sdk/reactnative)
 
@@ -30,7 +25,7 @@ Step 2：
 
 把上面的包导入，完成集成部分。
 
-### 2. ios  和rn 的交互类
+#### ios  和rn 的交互类
 
 把官网下载下来解压后的react native 交互代码  拷贝到工程
 
@@ -40,7 +35,7 @@ Step 2：
 
 ![um10](../src/image/um10.png)
 
-### 3. 工程的相关配置 sdk 的初始化
+#### 工程的相关配置 sdk 的初始化
 
 在AppDelegate.m 文件中，头文件导入 以及初始化 友盟统计
 
@@ -59,7 +54,7 @@ Step 2：
 
 OK 原生部分已经完成
 
-### RN调用部分
+#### RN调用部分
 
 这里封装了一下 umtj.js 可作为参考
 

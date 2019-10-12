@@ -1,31 +1,33 @@
+[toc]
+
 ### Moment.js -- JavaScript 日期处理类库
 
 - [官网](http://momentjs.cn/docs/)
 
 就像 官网 所说，Moment.js -- JavaScript 日期处理类库，好用X3
 
-**当前时间**
+#### 当前时间
 
 > moment().format("YYYY-MM-DD HH:mm:ss")
 
-**当前时间的前10天时间**
+#### 当前时间的前10天时间
 
 > moment().subtract(10, "days").format("YYYY-MM-DD")
 
-**当前时间的前1年时间**
+#### 当前时间的前1年时间
 
 > moment().subtract(1, "years").format("YYYY-MM-DD")
 
-**当前时间的前3个月时间**
+#### 当前时间的前3个月时间
 
 > moment().subtract(3, "months").format("YYYY-MM-DD")
 
-**当前时间的前一个星期时间**
+#### 当前时间的前一个星期时间
 
 > moment().subtract(1, "weeks").format("YYYY-MM-DD")
 
 
-**当前日期格式化**
+#### 当前日期格式化
 
 ```js
 //四月 6日 2015, 3:55:57 下午
@@ -51,7 +53,7 @@ moment().format('YYYY-MM-DD h:mm:ss a')
 
 ```
 
-**指定日期格式化**
+#### 指定日期格式化
 
 ```js
 // 3年前
@@ -71,7 +73,7 @@ moment().startOf('hour').fromNow()
 
 ```
 
-**当前日期向前或者向后推的日期格式化**
+#### 当前日期向前或者向后推的日期格式化
 
 ```js
 // 2015年3月27日
@@ -100,7 +102,7 @@ moment().add(10, 'days').calendar()
 
 ```
 
-**也可以使用下面方式日期格式化**
+#### 日期格式化
 
 ```js
 // 2015-04-06
@@ -133,7 +135,7 @@ moment().format('llll')
 
 
 
-**可选自定义参数**
+#### 可选自定义参数
 
 Moment.js提供了丰富的说明文档，使用它还可以创建日历项目等复杂的日期时间应用。我们日常开发中最常用的是格式化时间，下面我把常用的格式制作成表格说明供有需要的朋友查看：
 

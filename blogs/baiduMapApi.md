@@ -1,14 +1,18 @@
+[toc]
+
 ### 百度地图 API 踩坑记录
 
 [`[百度地图开放平台]`](http://lbsyun.baidu.com/)
 
-直接拿已有的百度账号登录就可以，
+直接拿已有的百度账号登录就可以
 
-- `申请秘钥`
+#### 步骤
+
+##### 申请秘钥
 
 ![aSmallPartOFTheResults](https://github.com/fightingljm/myblog/blob/master/src/image/applicationSecretKey.png?raw=true)
 
-- `get到申请到的秘钥`
+##### get到申请到的秘钥
 
 填写好信息后。点击确认按钮则生成生成一个密钥。界面会调转到列表管理页面。访问应用(AK)这一列的值就是你的密钥。如下图：
 
@@ -16,13 +20,14 @@
 
 接下来就是使用了
 
-- `网页调用`
+##### 网页调用
 
 ps：其实 [百度地图的 API](http://lbsyun.baidu.com/index.php?title=jspopular/guide/helloworld) 已经写的很清楚了
 
 ```html
 <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=您的密钥"></script>
 ```
+
 
 > 注意：
 *v2.0版本的引用方式*
@@ -32,7 +37,7 @@ src="http://api.map.baidu.com/api?v=1.4&key=您的密钥&callback=initialize"
 
 这里介绍的是浏览器定位获取经纬度，并进行逆地址解析，定位到具体街道，作为一个菜鸟的我想想就很酷，没想到一看他的那些 demo ，还有更酷的
 
-**浏览器定位获取经纬度**
+#### 浏览器定位获取经纬度
 
 首先要保证你有一个容器
 
@@ -67,7 +72,7 @@ componentDidMount(){
 }
 ```
 
-**逆地址解析**
+#### 逆地址解析
 
 把存到 state 里的经纬度拿过来解析，并存到 store 里管理，这里只记录地址解析，和部分存储步骤
 

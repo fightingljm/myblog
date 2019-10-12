@@ -37,6 +37,7 @@
   background-color: #f8f8f8;
   display: block;
   padding: 20px;
+  margin: 20px 0;
   font-size: 14px;
   color: #777777;
   overflow-x: auto;
@@ -58,7 +59,9 @@
   padding-left: 20px;
   line-height: 30px;
   margin-bottom: 33px;
+  margin-top: 33px;
   margin-left: 0;
+  background-color: #f8f8f8;
 }
 .post-content p {
   color: #606060;
