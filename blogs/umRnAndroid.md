@@ -19,9 +19,9 @@
  umeng-common-2.0.1.jar
  放到工程目录下的libs文件夹下
 
-![um1](../src/image/um1.png)
+![um1](https://github.com/fightingljm/myblog/blob/master/src/image/um1.png)
 
-![um2](../src/image/um2.png)
+![um2](https://github.com/fightingljm/myblog/blob/master/src/image/um2.png)
 
 把jar包添加到工程中
 
@@ -85,13 +85,13 @@ dependencies {
 
 接下来把官网下载下来的交互文件放到工程中，包括下面三个文件
 
-![um3](../src/image/um3.png)
+![um3](https://github.com/fightingljm/myblog/blob/master/src/image/um3.png)
 
  DplusReactPackage.java
  RNUMConfigure.java
  AnalyticsModule.java
 
-<img src="../src/image/um4.png" style="zoom:50%" />
+<img src="https://github.com/fightingljm/myblog/blob/master/src/image/um4.png" style="zoom:50%" />
 
 之后，就是把相关 java代码，改下包路径 按照错误提示更改就行了
 
@@ -196,4 +196,4 @@ click=()=>{
 
 这里的 “login” 是在友盟后台自定义的埋点值，可以进行手动埋点用来统计用户一些行为操作，方便产品运营
 
-![um5](../src/image/um5.png)
+![um5](https://github.com/fightingljm/myblog/blob/master/src/image/um5.png)

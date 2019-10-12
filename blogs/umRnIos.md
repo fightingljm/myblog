@@ -16,9 +16,9 @@
 
 解压后得到这些文件
 
-![um6](../src/image/um6.png)
+![um6](https://github.com/fightingljm/myblog/blob/master/src/image/um6.png)
 
-![um7](../src/image/um7.png)
+![um7](https://github.com/fightingljm/myblog/blob/master/src/image/um7.png)
 
 把这些解压后的framework 导入到工程
 
@@ -29,7 +29,7 @@ Step 1：Project-->Add Files to
 
 Step 2：
 
-![um8](../src/image/um8.png)
+![um8](https://github.com/fightingljm/myblog/blob/master/src/image/um8.png)
 
 把上面的包导入，完成集成部分。
 
@@ -37,11 +37,11 @@ Step 2：
 
 把官网下载下来解压后的react native 交互代码  拷贝到工程
 
-![um9](../src/image/um9.png)
+![um9](https://github.com/fightingljm/myblog/blob/master/src/image/um9.png)
 
 这四个OC文件
 
-![um10](../src/image/um10.png)
+![um10](https://github.com/fightingljm/myblog/blob/master/src/image/um10.png)
 
 #### 工程的相关配置 sdk 的初始化
 

@@ -77,7 +77,7 @@ fetch_and_unpack folly-2018.10.22.00.tar.gz https://github.com/facebook/folly/ar
 
 >1、.m文件没有导入，在Build Phases里的Compile Sources 中添加报错的文件
 
-![xcode1](../src/image/xcode1.png)
+![xcode1](https://github.com/fightingljm/myblog/blob/master/src/image/xcode1.png)
 
 > 2、.framework文件没有导入，静态库编译时往往需要一些库的支持，查看你是否有没有导入的库文件
 > 是在Build Phases里的Link Binary With Libraries中添加，同上
