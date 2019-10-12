@@ -1,7 +1,15 @@
-[toc]
-
 ### Xcode 开发中遇到的问题及解决方法
 
+<!-- TOC -->
+
+- [Xcode 开发中遇到的问题及解决方法](#xcode-开发中遇到的问题及解决方法)
+    - [Undefined symbols for architecture x8664编译错误](#undefined-symbols-for-architecture-x8664编译错误)
+    - ['config.h' file not found](#configh-file-not-found)
+    - [No member named 'rip' in 'darwinarmthreadstate'](#no-member-named-rip-in-darwinarmthreadstate)
+    - [React Native iOS使用Xcode打开，卡在Running custom shell scripts "install third party"](#react-native-ios使用xcode打开卡在running-custom-shell-scripts-install-third-party)
+    - [彻底解决OBJCCLASS$某文件名", referenced from:问题](#彻底解决objcclass某文件名-referenced-from问题)
+
+<!-- /TOC -->
 
 #### Undefined symbols for architecture x86_64编译错误
 

@@ -1,4 +1,29 @@
-[toc]
+<!-- TOC -->
+
+- [git 基本命令](#git-基本命令)
+    - [新建分支](#新建分支)
+    - [删除分支](#删除分支)
+    - [切换远程分支](#切换远程分支)
+    - [丢弃本地修改](#丢弃本地修改)
+- [GitLab 上怎样把新 commits 使用在自己的 fork 上](#gitlab-上怎样把新-commits-使用在自己的-fork-上)
+    - [配置上游项目地址。](#配置上游项目地址)
+    - [获取上游项目更新。](#获取上游项目更新)
+    - [合并到本地分支。](#合并到本地分支)
+    - [提交推送。](#提交推送)
+- [git commit 规范](#git-commit-规范)
+    - [格式](#格式)
+    - [Header](#header)
+        - [type](#type)
+        - [subject](#subject)
+    - [Body](#body)
+    - [Footer](#footer)
+        - [关联 Issue](#关联-issue)
+        - [关闭 Issue](#关闭-issue)
+    - [例子](#例子)
+- [git commit 时 图标使用](#git-commit-时-图标使用)
+    - [emoji 指南](#emoji-指南)
+
+<!-- /TOC -->
 
 ### git 基本命令
 

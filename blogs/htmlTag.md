@@ -1,6 +1,12 @@
-[toc]
-
 ### HTML 标签的嵌套规则
+
+<!-- TOC -->
+
+- [HTML 标签的嵌套规则](#html-标签的嵌套规则)
+    - [HTML 标签包括 块级元素(block)、内嵌元素（inline）](#html-标签包括-块级元素block内嵌元素inline)
+    - [HTML 标签的嵌套规则](#html-标签的嵌套规则)
+
+<!-- /TOC -->
 
 #### HTML 标签包括 块级元素(block)、内嵌元素（inline）
 

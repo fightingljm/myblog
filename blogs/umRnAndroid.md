@@ -1,6 +1,14 @@
-[toc]
-
 ### react native 友盟统计 Android 端集成
+
+<!-- TOC -->
+
+- [react native 友盟统计 Android 端集成](#react-native-友盟统计-android-端集成)
+    - [sdk集成部分](#sdk集成部分)
+    - [android端配置](#android端配置)
+    - [交互模块](#交互模块)
+    - [RN端调用](#rn端调用)
+
+<!-- /TOC -->
 
 #### sdk集成部分
 

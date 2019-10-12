@@ -1,6 +1,14 @@
-[toc]
-
 ### react native 友盟统计 IOS 端集成
+
+<!-- TOC -->
+
+- [react native 友盟统计 IOS 端集成](#react-native-友盟统计-ios-端集成)
+    - [sdk 集成部分](#sdk-集成部分)
+    - [ios  和rn 的交互类](#ios--和rn-的交互类)
+    - [工程的相关配置 sdk 的初始化](#工程的相关配置-sdk-的初始化)
+    - [RN调用部分](#rn调用部分)
+
+<!-- /TOC -->
 
 #### sdk 集成部分
 
