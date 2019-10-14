@@ -17,5 +17,7 @@
     {"title":"react-native UM IOS","desc":"react native 友盟统计 IOS 端集成","url":"umRnIos"},
     {"title":"react-native UM Android","desc":"react native 友盟统计 Android 端集成","url":"umRnAndroid"},
     {"title":"Wechat Miniprogram","desc":"微信小程序踩坑记录","url":"wechatMiniprogram"},
-    {"title":"Xcode","desc":"Xcode 开发中遇到的问题及解决方法","url":"xcode"}
+    {"title":"Xcode","desc":"Xcode 开发中遇到的问题及解决方法","url":"xcode"},
+    {"title":"Markdown 代码块语言对应的关键字","desc":"Markdown 代码块语言对应的关键字","url":"markdown"},
+    {"title":"ECMAScript 6","desc":"记录被自己忽略的 es6 特性","url":"es6"}
 ]
