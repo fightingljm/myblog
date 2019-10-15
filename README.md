@@ -1,5 +1,32 @@
 # 日常工作学习笔记 📒
 
+### [React Hook](https://github.com/fightingljm/myblog/blob/master/blogs/reactHook.md)
+useEffect useMemo useCallback 使用hook编写redux
+
+### [Xcode](https://github.com/fightingljm/myblog/blob/master/blogs/xcode.md)
+Xcode 开发中遇到的问题及解决方法
+
+### [git](https://github.com/fightingljm/myblog/blob/master/blogs/git.md)
+git 相关命令、fork 流程，commit 规范，commit emoji指南
+
+### [react-native TextInput](https://github.com/fightingljm/myblog/blob/master/blogs/rnTextInputbug.md)
+react-native TextInput 中文输入bug","
+
+### [react-native UM IOS](https://github.com/fightingljm/myblog/blob/master/blogs/umRnIos.md)
+react native 友盟统计 IOS 端集成
+
+### [react-native UM Android](https://github.com/fightingljm/myblog/blob/master/blogs/umRnAndroid.md)
+react native 友盟统计 Android 端集成
+
+### [ECMAScript 6](https://github.com/fightingljm/myblog/blob/master/blogs/es6.md)
+记录被自己忽略的 es6 特性
+
+### [Wechat Miniprogram](https://github.com/fightingljm/myblog/blob/master/blogs/wechatMiniprogram.md)
+微信小程序踩坑记录
+
+### [Markdown 代码块语言对应的关键字](https://github.com/fightingljm/myblog/blob/master/blogs/markdown.md)
+Markdown 代码块语言对应的关键字
+
 ### [Dangerously Set InnerHTML](https://github.com/fightingljm/myblog/blob/master/blogs/dangerouslySetInnerHTML.md)
 HTML 动态渲染
 
@@ -38,30 +65,3 @@ JavaScript 日期处理类库
 
 ### [数组对象的一些方法](https://github.com/fightingljm/myblog/blob/master/blogs/arrayObject.md)
 数组对象的一些方法
-
-### [git](https://github.com/fightingljm/myblog/blob/master/blogs/git.md)
-git 相关命令、fork 流程，commit 规范，commit emoji指南
-
-### [react-native TextInput](https://github.com/fightingljm/myblog/blob/master/blogs/rnTextInputbug.md)
-react-native TextInput 中文输入bug","
-
-### [react-native UM IOS](https://github.com/fightingljm/myblog/blob/master/blogs/umRnIos.md)
-react native 友盟统计 IOS 端集成
-
-### [react-native UM Android](https://github.com/fightingljm/myblog/blob/master/blogs/umRnAndroid.md)
-react native 友盟统计 Android 端集成
-
-### [Wechat Miniprogram](https://github.com/fightingljm/myblog/blob/master/blogs/wechatMiniprogram.md)
-微信小程序踩坑记录
-
-### [Xcode](https://github.com/fightingljm/myblog/blob/master/blogs/xcode.md)
-Xcode 开发中遇到的问题及解决方法
-
-### [Markdown 代码块语言对应的关键字](https://github.com/fightingljm/myblog/blob/master/blogs/markdown.md)
-Markdown 代码块语言对应的关键字
-
-### [ECMAScript 6](https://github.com/fightingljm/myblog/blob/master/blogs/es6.md)
-记录被自己忽略的 es6 特性
-
-### [React Hook](https://github.com/fightingljm/myblog/blob/master/blogs/reactHook.md)
-useEffect useMemo useCallback 使用hook编写redux
