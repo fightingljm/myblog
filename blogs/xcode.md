@@ -4,6 +4,7 @@
 
 - [Xcode 开发中遇到的问题及解决方法](#xcode-开发中遇到的问题及解决方法)
     - [Undefined symbols for architecture x8664编译错误](#undefined-symbols-for-architecture-x8664编译错误)
+    - [Unknown argument type 'attribute' in method -[RCTAppState getCurrentAppState:error:]. Extend RCTConvert to support this type.](#unknown-argument-type-attribute-in-method--rctappstate-getcurrentappstateerror-extend-rctconvert-to-support-this-type)
     - ['config.h' file not found](#configh-file-not-found)
     - [No member named 'rip' in 'darwinarmthreadstate'](#no-member-named-rip-in-darwinarmthreadstate)
     - [React Native iOS使用Xcode打开，卡在Running custom shell scripts "install third party"](#react-native-ios使用xcode打开卡在running-custom-shell-scripts-install-third-party)
@@ -26,6 +27,25 @@
 > ```
 >
 > 3. 最后将 Build Active Architectures Only 设置为 NO
+
+#### Unknown argument type '__attribute__' in method -[RCTAppState getCurrentAppState:error:]. Extend RCTConvert to support this type.
+
+这个 bug 是xcode11引起的，可以查看这个问题的 [提交记录](https://github.com/facebook/react-native/issues/25138)
+
+我们只需要找到 /node_modules/react-native/React/Base/RCTModuleMethod.mm 这个文件
+
+修改下面的代码
+
+```objective-c
+
+static BOOL RCTParseUnused(const char **input)
+{
+  return RCTReadString(input, "__unused") ||
+  RCTReadString(input, "__attribute__((__unused__))") ||
+  RCTReadString(input, "__attribute__((unused))");
+}
+```
+
 
 #### 'config.h' file not found
 
