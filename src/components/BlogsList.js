@@ -7,6 +7,8 @@ import CircularProgress from 'material-ui/CircularProgress';
 
 import BlogCard from './BlogCard.js';
 
+const pinyin = require("js-pinyin")
+
 class BlogsList extends React.Component {
 	constructor() {
 		super();
@@ -41,9 +43,19 @@ class BlogsList extends React.Component {
 				)
 			});
 		} else {
+			const inputString = this.props.search.toLowerCase()
 			for (var i = 0; i < this.state.posts.length; i++) {
 				let thisPost = this.state.posts[i];
-				if (thisPost.title.indexOf(this.props.search) != -1) {
+				const title = thisPost.title
+				const title_string = pinyin.getFullChars(title).toLowerCase()
+				const desc = thisPost.desc
+				const desc_string = pinyin.getFullChars(desc).toLowerCase()
+				if (
+					title.indexOf(inputString) !== -1
+					|| title_string.indexOf(inputString) !== -1
+					|| desc.indexOf(inputString) !== -1
+					|| desc_string.indexOf(inputString) !== -1
+				) {
 					blogCards.push(
 						<BlogCard
 							title={thisPost.title}
