@@ -1,5 +1,8 @@
 # 日常工作学习笔记 📒
 
+### [ZSH](https://github.com/fightingljm/myblog/blob/master/blogs/zsh.md)
+终端 zsh - Oh My Zsh 终极体验
+
 ### [React Hook](https://github.com/fightingljm/myblog/blob/master/blogs/reactHook.md)
 useEffect useMemo useCallback 使用hook编写redux
 

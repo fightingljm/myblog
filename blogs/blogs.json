@@ -1,5 +1,10 @@
 [
     {
+        "title": "终端 zsh ",
+        "desc": "终端 zsh - Oh My Zsh 终极体验",
+        "url": "zsh"
+    },
+    {
         "title": "React Hook",
         "desc": "useEffect useMemo useCallback 使用hook编写redux",
         "url": "reactHook"
@@ -108,10 +113,5 @@
         "title": "数组对象的一些方法",
         "desc": "数组对象的一些方法",
         "url": "arrayObject"
-    },
-    {
-        "title": "终端 zsh ",
-        "desc": "终端 zsh - Oh My Zsh 终极体验",
-        "url": "zsh"
     }
 ]
