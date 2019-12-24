@@ -1,5 +1,10 @@
 [
     {
+        "title": "react HOC ref",
+        "desc": "react 中通过 ref 获取高阶组件（HOC）子组件实例的解决方案",
+        "url": "reactHocRef"
+    },
+    {
         "title": "终端 zsh ",
         "desc": "终端 zsh - Oh My Zsh 终极体验",
         "url": "zsh"
