@@ -86,8 +86,9 @@ export default (WrappedComponent) => {
       };
       // 在这里把getInstance赋值给ref，
       // 传给`WrappedComponent`，这样 getInstance 就能获取到`WrappedComponent`实例
-      props.ref = (el)=>{
-          this.props.getInstance && this.props.getInstance(el);this.props.ref && this.props.ref(el);
+      props.ref = (el) => {
+          this.props.getInstance && this.props.getInstance(el);
+          this.props.ref && this.props.ref(el);
       }
       return (
         <WrappedComponent {...props} />
