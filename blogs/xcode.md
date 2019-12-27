@@ -2,6 +2,20 @@
 
 
 
+- xcode下载历史版本
+  [xcode历史版本下载地址](<https://developer.apple.com/download/more/>)
+
+- 回退历史版本后，进入xcode10  提示“XCBBuildService”意外退出。xcode没退出 但是没法编译提示
+
+  Showing All Messages
+  : The Xcode build system has crashed. Please close and reopen your workspace.
+
+  ```
+  1. 删除 DerivedData   (located at ~/Library/Developer/Xcode/DerivedData)
+  2. 参照上面的链接设置：File -> Workspace Settings -> Build System -> Legacy Build Sysem
+  3. 关闭xcode重新打开
+  ```
+
 - 'config.h' file not found
 
   >1. Close **Xcode**.
