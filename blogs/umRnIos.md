@@ -1,23 +1,24 @@
-## react native 友盟统计 IOS 端集成
+### react native 友盟统计 IOS 端集成
 
+<!-- TOC -->
 
+- [react native 友盟统计 IOS 端集成](#react-native-友盟统计-ios-端集成)
+    - [sdk 集成部分](#sdk-集成部分)
+    - [ios  和rn 的交互类](#ios--和rn-的交互类)
+    - [工程的相关配置 sdk 的初始化](#工程的相关配置-sdk-的初始化)
+    - [RN调用部分](#rn调用部分)
 
-### 步骤
+<!-- /TOC -->
 
-- ios端的sdk集成
-- ios  和rn 的交互类
-- 工程的相关配置 （初始化sdk）
-- rn 端调用
-
-### 1.sdk 集成部分
+#### sdk 集成部分
 
 [友盟sdk下载地址](https://developer.umeng.com/sdk/reactnative)
 
 解压后得到这些文件
 
-![image-20190127100218637](../src/image/image-20190127100218637.png)
+![um6](https://github.com/fightingljm/myblog/blob/master/src/image/um6.png)
 
-![image-20190127100301174](../src/image/image-20190127100301174.png)
+![um7](https://github.com/fightingljm/myblog/blob/master/src/image/um7.png)
 
 把这些解压后的framework 导入到工程
 
@@ -28,21 +29,21 @@ Step 1：Project-->Add Files to
 
 Step 2：
 
-![image-20190127100700859](../src/image/image-20190127100700859.png)
+![um8](https://github.com/fightingljm/myblog/blob/master/src/image/um8.png)
 
 把上面的包导入，完成集成部分。
 
-### 2. ios  和rn 的交互类
+#### ios  和rn 的交互类
 
 把官网下载下来解压后的react native 交互代码  拷贝到工程
 
-![image-20190127101017305](../src/image/image-20190127101017305.png)
+![um9](https://github.com/fightingljm/myblog/blob/master/src/image/um9.png)
 
 这四个OC文件
 
-![image-20190127101059930](../src/image/image-20190127101059930.png)
+![um10](https://github.com/fightingljm/myblog/blob/master/src/image/um10.png)
 
-### 3. 工程的相关配置 sdk 的初始化
+#### 工程的相关配置 sdk 的初始化
 
 在AppDelegate.m 文件中，头文件导入 以及初始化 友盟统计
 
@@ -61,11 +62,11 @@ Step 2：
 
 OK 原生部分已经完成
 
-### RN调用部分
+#### RN调用部分
 
 这里封装了一下 umtj.js 可作为参考
 
-```javascript
+```js
 import { NativeModules } from 'react-native';
 
 const UMTJ = NativeModules.UMAnalyticsModule;
@@ -90,7 +91,7 @@ export const onEventWithLable = (eventId, label) => {
 
 调用原生模块
 
-```javascript
+```js
 import {
     onEvent,
     onEventWithLable,

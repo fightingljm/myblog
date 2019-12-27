@@ -1,8 +1,40 @@
-### 微信小程序开发(一) --- 动态修改页面标题
+<!-- TOC -->
 
-2017年8月24日 晴
+- [微信小程序踩坑记录](#微信小程序踩坑记录)
+    - [参数“？”之后字符串被截取。](#参数之后字符串被截取)
+    - [动态修改页面标题](#动态修改页面标题)
 
-- 全局配置 app.json
+<!-- /TOC -->
+
+### 微信小程序踩坑记录
+
+#### 参数“？”之后字符串被截取。 
+
+**例子**
+
+```js
+let url = "https://m.kuaidi100.com/index_all.html?type=emsguoji&postid=BE960265852US"
+wx.navigateTo({
+    url: `/pages/webView/index?url=${url}`
+})
+```
+
+**解决办法**
+
+  可以使用 `encodeURIComponent()` 函数可把字符串作为 URI 组件进行编码。
+
+  ```js
+  const url = encodeURIComponent(result.url)
+  wx.navigateTo({
+      url: `/pages/webView/index?url=${url}`
+  })
+  ```
+
+  在获取的时候 `decodeURIComponent(options.url)`
+
+#### 动态修改页面标题
+
+**全局配置 app.json**
 
 `app.json 用以设置跳转页面链接、窗体格式、TabBar以及网络超时等`
 
@@ -23,9 +55,9 @@
 }
 ```
 
-- 页面功能固定
+**页面功能固定**
 
-eg. search.json
+例如：search.json
 
 ```json
 {
@@ -33,9 +65,9 @@ eg. search.json
 }
 ```
 
-- 页面内容与业务关联
+**页面内容与业务关联**
 
-eg. shop.js加载时动态设置页面标题
+例如：shop.js加载时动态设置页面标题
 
 ```js
 var app = getApp();

@@ -1,15 +1,16 @@
-## react native 友盟统计 Android 端集成
+### react native 友盟统计 Android 端集成
 
+<!-- TOC -->
 
+- [react native 友盟统计 Android 端集成](#react-native-友盟统计-android-端集成)
+    - [sdk集成部分](#sdk集成部分)
+    - [android端配置](#android端配置)
+    - [交互模块](#交互模块)
+    - [RN端调用](#rn端调用)
 
-### 步骤
+<!-- /TOC -->
 
-- sdk的集成
-- 原生模块的配置
-- 原生交互模块
-- RN端调用
-
-### sdk集成部分
+#### sdk集成部分
 
 [友盟sdk下载地址](https://developer.umeng.com/sdk/reactnative)
 
@@ -18,13 +19,13 @@
  umeng-common-2.0.1.jar
  放到工程目录下的libs文件夹下
 
-![image-20190126174511146](../src/image/image-20190126174511146.png)
+![um1](https://github.com/fightingljm/myblog/blob/master/src/image/um1.png)
 
-![image-20190126174626486](../src/image/image-20190126174626486.png)
+![um2](https://github.com/fightingljm/myblog/blob/master/src/image/um2.png)
 
 把jar包添加到工程中
 
-```
+```java
 // android/app/build.gradle
 dependencies {
     ...
@@ -49,7 +50,7 @@ dependencies {
 
 到这里Android端sdk已经集成了。
 
-## android端配置
+#### android端配置
 
 ```xml
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
@@ -80,17 +81,17 @@ dependencies {
 </manifest>
 ```
 
-## 交互模块
+#### 交互模块
 
 接下来把官网下载下来的交互文件放到工程中，包括下面三个文件
 
-![image-20190127100910245](../src/image/image-20190127100910245.png)
+![um3](https://github.com/fightingljm/myblog/blob/master/src/image/um3.png)
 
  DplusReactPackage.java
  RNUMConfigure.java
  AnalyticsModule.java
 
-<img src="../src/image/image-20190127091022304.png" style="zoom:50%" />
+<img src="https://github.com/fightingljm/myblog/blob/master/src/image/um4.png" style="zoom:50%" />
 
 之后，就是把相关 java代码，改下包路径 按照错误提示更改就行了
 
@@ -150,11 +151,11 @@ protected void onPause() { //友盟统计初始化
 
 ok基本上按照步骤走的话，都很顺利，到这里就可以RN端调用了。
 
-## RN端调用
+#### RN端调用
 
 这里封装了一下 umtj.js 可作为参考
 
-```javascript
+```js
 import { NativeModules } from 'react-native';
 
 const UMTJ = NativeModules.UMAnalyticsModule;
@@ -179,7 +180,7 @@ export const onEventWithLable = (eventId, label) => {
 
 调用原生模块
 
-```javascript
+```js
 import {
     onEvent,
     onEventWithLable,
@@ -195,4 +196,4 @@ click=()=>{
 
 这里的 “login” 是在友盟后台自定义的埋点值，可以进行手动埋点用来统计用户一些行为操作，方便产品运营
 
-![image-20190127093958222](../src/image/image-20190127093958222.png)
+![um5](https://github.com/fightingljm/myblog/blob/master/src/image/um5.png)

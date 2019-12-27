@@ -35,8 +35,12 @@
 }
 .post-content pre {
   background-color: #f8f8f8;
+  /* background-color: #262a2d; */
+  /* background-color: #043362; */
+  border-radius: 4px;
   display: block;
   padding: 20px;
+  margin: 20px 0;
   font-size: 14px;
   color: #777777;
   overflow-x: auto;
@@ -47,17 +51,20 @@
 }
 .post-content p code {
   font-size: 14px;
-  background-color: pink;
-  padding: 4px;
+  background: rgba(255,229,100,0.2);
+  padding: 0 3px;
+  color: #1a1a1a;
 }
 .post-content blockquote {
-  border-left: 5px solid #00bcd4;
+  border-left: 5px solid #dedfe0;
   font-style: italic;
   font-weight: 400;
   padding-left: 20px;
   line-height: 30px;
   margin-bottom: 33px;
+  margin-top: 33px;
   margin-left: 0;
+  background-color: #f8f8f8;
 }
 .post-content p {
   color: #606060;
@@ -66,16 +73,16 @@
   margin-bottom: 20px;
 }
 .post-content img {
-  width: 100%;
+  width: 50%;
   display: block;
   height: auto;
 }
 .post-content a {
-  color: #ff4081;
+  color: #7882FF;
   text-decoration: none;
 }
 .post-content a:hover {
-  color: #444;
+  color: #7A7AA5;
 }
 .post-content a.video {
   display: block;

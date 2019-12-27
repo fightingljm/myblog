@@ -1,9 +1,7 @@
 ### React Router 4 的使用方法
 
-2017年8月13日 阵雨&海上大风蓝色预警
-
-- 还是安利最重要的 [官网](https://reacttraining.com/react-router/)
-- 还有我强势走来的 [Github](https://github.com/fightingljm/reactRouter4)
+- [官网](https://reacttraining.com/react-router/)
+- [Github](https://github.com/fightingljm/reactRouter4)
 
 **简单开始一个栗子**
 
@@ -28,7 +26,7 @@
 
 v4 条件下，同一个 url ，可能会匹配多于一个的 Route ，[exact 修饰符](https://reacttraining.com/react-router/web/api/Route/exact-bool) 针对的就是这个问题。
 
-```js
+```jsx
 const App = () => (
   <Router>
     <div>
@@ -50,7 +48,7 @@ V4 这里，一切都更像组件了。根据官方文档上的说明：
 >
 <Redirect /> 的作用和服务器端返回 HTTP 3XX 代码的重定向效果类似
 
-```js
+```jsx
 import { Route, Redirect } from 'react-router'
 
 <Route exact path="/" render={() => (
@@ -64,7 +62,7 @@ import { Route, Redirect } from 'react-router'
 
 - 跳转到登录前的页面
 
-```js
+```jsx
 import React from 'react'
 import {
   BrowserRouter as Router,
@@ -164,7 +162,7 @@ export default App;
 
 把 URL 中动态的部分作为参数，传递到组件中备用。
 
-```js
+```jsx
 import React from 'react'
 import {
   BrowserRouter as Router,
@@ -193,7 +191,7 @@ export default App;
 
 **match.url 来实现嵌套 Link**
 
-```js
+```jsx
 import React from 'react'
 import {
   BrowserRouter as Router,
@@ -237,7 +235,7 @@ export default App;
 
 **Not Match(404)**
 
-```js
+```jsx
 import React from 'react'
 import {
   BrowserRouter as Router,
@@ -278,7 +276,7 @@ React Router 区别于其他语言框架下的 router 的一大特点就是一�
 
 拿栗子来说话
 
-```js
+```jsx
 import React from 'react'
 import {
   BrowserRouter as Router,

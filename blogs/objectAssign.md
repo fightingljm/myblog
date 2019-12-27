@@ -1,12 +1,8 @@
-### 百日博客2 -- Object.assign()
+### Object.assign
 
-2017.04.22 天津 送别某人
+Object.assign 方法用于将所有可枚举的属性的值从一个或多个源对象复制到目标对象
 
-Object.assign() 方法用于将所有可枚举的属性的值从一个或多个源对象复制到目标对象。它将返回目标对象。
-
-这个方法是我在看煊赫大神的 coding 的时候发起的疑问,一个渣渣从没看到过的方法
-
-coding 是这个样子 :information_desk_person:
+它将返回目标对象
 
 ```js
 'use strict';
@@ -14,18 +10,18 @@ coding 是这个样子 :information_desk_person:
 import types from '../../constants/ActionTypes';
 
 const initialState = {
-  login : false,
+	login : false,
 }
 
 const login = (state = initialState, action)=>{
-  switch (action.type) {
-    case types.user.LOGIN:             // 容器初始化准备状态
-      return Object.assign({}, state, {
-        login: action.login,
-      })
-    default:
-      return state;
-  }
+	switch (action.type) {
+		case types.user.LOGIN:             // 容器初始化准备状态
+			return Object.assign({}, state, {
+				login: action.login,
+			})
+		default:
+			return state;
+	}
 }
 
 export default login
@@ -35,7 +31,7 @@ export default login
 
 #### 语法
 
-```
+```js
 Object.assign(target, ...sources)
 ```
 
@@ -64,9 +60,11 @@ Object.assign 方法只会拷贝源对象 **自身的** 并且 **可枚举的** 
 **复制一个 object** :new_moon_with_face:
 
 ```js
+
 var obj = { a: 1 };
 var copy = Object.assign({}, obj);
 console.log(copy); // { a: 1 }
+
 ```
 
 **深度拷贝问题** :sun_with_face:
@@ -75,20 +73,20 @@ console.log(copy); // { a: 1 }
 
 ```js
 function test() {
-  let a = { b: {c:4} , d: { e: {f:1}} }
-  let g = Object.assign({},a)
-  let h = JSON.parse(JSON.stringify(a));
-  console.log(g.d) // { e: { f: 1 } }
-  g.d.e = 32
-  console.log('g.d.e set to 32.') // g.d.e set to 32.
-  console.log(g) // { b: { c: 4 }, d: { e: 32 } }
-  console.log(a) // { b: { c: 4 }, d: { e: 32 } }
-  console.log(h) // { b: { c: 4 }, d: { e: { f: 1 } } }
-  h.d.e = 54
-  console.log('h.d.e set to 54.') // h.d.e set to 54.
-  console.log(g) // { b: { c: 4 }, d: { e: 32 } }
-  console.log(a) // { b: { c: 4 }, d: { e: 32 } }
-  console.log(h) // { b: { c: 4 }, d: { e: 54 } }
+	let a = { b: {c:4} , d: { e: {f:1}} }
+	let g = Object.assign({},a)
+	let h = JSON.parse(JSON.stringify(a));
+	console.log(g.d) // { e: { f: 1 } }
+	g.d.e = 32
+	console.log('g.d.e set to 32.') // g.d.e set to 32.
+	console.log(g) // { b: { c: 4 }, d: { e: 32 } }
+	console.log(a) // { b: { c: 4 }, d: { e: 32 } }
+	console.log(h) // { b: { c: 4 }, d: { e: { f: 1 } } }
+	h.d.e = 54
+	console.log('h.d.e set to 54.') // h.d.e set to 54.
+	console.log(g) // { b: { c: 4 }, d: { e: 32 } }
+	console.log(a) // { b: { c: 4 }, d: { e: 32 } }
+	console.log(h) // { b: { c: 4 }, d: { e: 54 } }
 }
 test();
 ```
@@ -232,6 +230,3 @@ if (typeof Object.assign != 'function') {
   };
 }
 ```
-
-
-版权说明:转载自 MDN
