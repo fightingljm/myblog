@@ -1,5 +1,10 @@
 [
     {
+        "title": "闭包",
+        "desc": "JavaScript 中级教程 --- 闭包",
+        "url": "closures"
+    },
+    {
         "title": "react HOC ref",
         "desc": "react 中通过 ref 获取高阶组件（HOC）子组件实例的解决方案",
         "url": "reactHocRef"

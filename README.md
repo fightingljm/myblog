@@ -1,5 +1,8 @@
 # 日常工作学习笔记 📒
 
+### [闭包](https://github.com/fightingljm/myblog/blob/master/blogs/closures.md)
+JavaScript 中级教程 --- 闭包
+
 ### [react Hoc Ref](https://github.com/fightingljm/myblog/blob/master/blogs/reactHocRef.md)
 react 中通过 ref 获取高阶组件（HOC）子组件实例的解决方案
 
