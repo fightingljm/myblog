@@ -1,5 +1,8 @@
 # 日常工作学习笔记 📒
 
+### [闭包](https://github.com/fightingljm/myblog/blob/master/blogs/Inheritance_and_the_prototype_chain.md)
+JavaScript 高级教程 --- 继承与原型链
+
 ### [闭包](https://github.com/fightingljm/myblog/blob/master/blogs/closures.md)
 JavaScript 中级教程 --- 闭包
 

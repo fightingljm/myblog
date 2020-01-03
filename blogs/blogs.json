@@ -1,5 +1,10 @@
 [
     {
+        "title": "继承与原型链",
+        "desc": "JavaScript 高级教程 --- 继承与原型链",
+        "url": "Inheritance_and_the_prototype_chain"
+    },
+    {
         "title": "闭包",
         "desc": "JavaScript 中级教程 --- 闭包",
         "url": "closures"
