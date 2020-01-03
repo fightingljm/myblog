@@ -1,5 +1,10 @@
 [
     {
+        "title": "prototype [[prototype]] __proto__",
+        "desc": "JS 中 prototype、[[prototype]]和__proto__的区别和用法",
+        "url": "prototype"
+    },
+    {
         "title": "继承与原型链",
         "desc": "JavaScript 高级教程 --- 继承与原型链",
         "url": "Inheritance_and_the_prototype_chain"

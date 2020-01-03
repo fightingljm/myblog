@@ -1,5 +1,8 @@
 # 日常工作学习笔记 📒
 
+### [prototype](https://github.com/fightingljm/myblog/blob/master/blogs/prototype.md)
+JS 中 `prototype` `[[prototype]]` `__proto__` 的区别和用法
+
 ### [闭包](https://github.com/fightingljm/myblog/blob/master/blogs/Inheritance_and_the_prototype_chain.md)
 JavaScript 高级教程 --- 继承与原型链
 
