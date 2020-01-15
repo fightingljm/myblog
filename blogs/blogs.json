@@ -1,7 +1,22 @@
 [
     {
+        "title": "数字精度丢失",
+        "desc": "JavaScript 数字精度丢失问题总结",
+        "url": "lostNumberAccuracy"
+    },
+    {
+        "title": "this",
+        "desc": "JavaScript 中 this 指向问题",
+        "url": "this"
+    },
+    {
+        "title": "正则表达式",
+        "desc": "JavaScript 标准内置对象 RegExp",
+        "url": "RegExp"
+    },
+    {
         "title": "prototype [[prototype]] __proto__",
-        "desc": "JS 中 prototype、[[prototype]]和__proto__的区别和用法",
+        "desc": "JavaScript 中 prototype、[[prototype]]和__proto__的区别和用法",
         "url": "prototype"
     },
     {
@@ -16,7 +31,7 @@
     },
     {
         "title": "react HOC ref",
-        "desc": "react 中通过 ref 获取高阶组件（HOC）子组件实例的解决方案",
+        "desc": "React 中通过 ref 获取高阶组件（HOC）子组件实例的解决方案",
         "url": "reactHocRef"
     },
     {

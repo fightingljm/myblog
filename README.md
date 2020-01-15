@@ -1,5 +1,14 @@
 # 日常工作学习笔记 📒
 
+### [数字精度丢失](https://github.com/fightingljm/myblog/blob/master/blogs/lostNumberAccuracy.md)
+JavaScript 数字精度丢失问题总结
+
+### [this](https://github.com/fightingljm/myblog/blob/master/blogs/this.md)
+this 指向问题
+
+### [RegExp](https://github.com/fightingljm/myblog/blob/master/blogs/RegExp.md)
+正则表达式
+
 ### [prototype](https://github.com/fightingljm/myblog/blob/master/blogs/prototype.md)
 JS 中 `prototype` `[[prototype]]` `__proto__` 的区别和用法
 
