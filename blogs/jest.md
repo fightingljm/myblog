@@ -89,3 +89,28 @@ describe('EmployeeManage Commonent test', () => {
 [官方文档](https://enzymejs.github.io/enzyme/)
 [参考](https://www.dazhuanlan.com/2019/10/01/5d928eb499f9b/)
 
+### Mock Function
+
+```js
+const myMock = jest.fn()
+console.log(myMock()); // undefined
+
+// mockReturnValueOnce 添加一次返回值
+// mockReturnValue 固定返回值
+myMock.mockReturnValueOnce(10).mockReturnValueOnce('x').mockReturnValue(true)
+console.log(myMock(), myMock(), myMock(), myMock()); // 10 'x' true true
+
+// 实现一个人工的 mock 覆盖原模块依赖
+const myMockFn = jest.fn(() => 'default').mockImplementationOnce(() => 'first call').mockImplementationOnce(() => 'section call')
+console.log(myMockFn(), myMockFn(), myMockFn(), myMockFn()); // first call section call default default
+
+// 函数被调用后，length 增加
+console.log(myMock.mock.calls.length); // 5
+console.log(myMockFn.mock.calls.length); // 4
+
+// 第一次调用的传入的第一个参数
+console.log(myMock.mock.calls[0][0]); // undefined
+console.log(myMockFn.mock.calls[0][0]); // undefined
+```
+
+[参考](https://www.dazhuanlan.com/2019/09/29/5d9011e617ff9/)
