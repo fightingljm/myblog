@@ -1,3 +1,57 @@
+### patch-package
+
+```bash
+yarn patch-package package-name
+```
+
+```json
+"scripts": {
+  "postinstall": "patch-package"
+}
+```
+
+### 源、代理设置
+
+- npm和yarn转换淘宝源和官方源
+
+  ```bash
+  npm config set registry http://registry.npm.taobao.org/
+  npm config set registry https://registry.npmjs.org/
+  
+  yarn config set registry http://registry.npm.taobao.org/
+  yarn config set registry https://registry.npmjs.org/
+  ```
+
+- npm 设置代理
+
+  ```bash
+  npm config set proxy http://127.0.0.1:8080
+  npm config set https-proxy http://127.0.0.1:8080
+  ```
+
+- npm 删除代理
+
+  ```bash
+  npm config delete proxy
+  npm config delete https-proxy
+  ```
+
+- yarn 设置代理
+
+  ```bash
+  yarn config set proxy http://127.0.0.1:8080
+  yarn config set https-proxy http://127.0.0.1:8080
+  ```
+
+- yarn 删除代理
+
+  ```bash
+  yarn config delete proxy
+  yarn config delete https-proxy
+  ```
+
+  
+
 ### hosts
 
 报错信息：Error: Error making request to https://raw.githubusercontent.com/truffle-box/bare-box/master/truffle.js. Got error: **connect ECONNREFUSED 151.101.192.133:443**. Please check the format of the requested resource.
