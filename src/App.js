@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import { Layout, Menu, Breadcrumb } from 'antd'
-import { HashRouter as Router } from 'react-router-dom';
+import { HashRouter as Router } from 'react-router-dom'
 import {
     LaptopOutlined,
     NotificationOutlined,
     UserOutlined
-} from '@ant-design/icons';
-import './App.css';
+} from '@ant-design/icons'
+import './App.css'
 
 const { SubMenu } = Menu
 const { Header, Content, Footer, Sider } = Layout
