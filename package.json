@@ -7,7 +7,6 @@
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
     "eject": "react-scripts eject",
-    "pre-lint": "eslint $(git diff-index --cached HEAD --name-only --diff-filter ACMR | egrep '.js$')",
     "commit-lint": "commitlint -E HUSKY_GIT_PARAMS"
   },
   "dependencies": {
@@ -28,7 +27,8 @@
   "devDependencies": {
     "husky": "^4.2.3",
     "lint-staged": "^10.1.1",
-    "pre-commit": "^1.2.2"
+    "pre-commit": "^1.2.2",
+    "prettier": "^2.0.2"
   },
   "eslintConfig": {
     "extends": "react-app",
@@ -114,12 +114,14 @@
       "last 1 safari version"
     ]
   },
-  "pre-commit": [
-    "pre-lint"
-  ],
   "husky": {
     "hooks": {
-      "commit-msg": "npm run commit-lint"
+      "pre-commit": "lint-staged"
     }
+  },
+  "lint-staged": {
+   "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+     "prettier --write"
+    ]
   }
 }
