@@ -1,91 +1,68 @@
-# 日常工作学习笔记 📒
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-### [数字精度丢失](https://github.com/fightingljm/myblog/blob/master/blogs/lostNumberAccuracy.md)
-JavaScript 数字精度丢失问题总结
+## Available Scripts
 
-### [this](https://github.com/fightingljm/myblog/blob/master/blogs/this.md)
-this 指向问题
+In the project directory, you can run:
 
-### [RegExp](https://github.com/fightingljm/myblog/blob/master/blogs/RegExp.md)
-正则表达式
+### `yarn start`
 
-### [prototype](https://github.com/fightingljm/myblog/blob/master/blogs/prototype.md)
-JS 中 `prototype` `[[prototype]]` `__proto__` 的区别和用法
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-### [闭包](https://github.com/fightingljm/myblog/blob/master/blogs/Inheritance_and_the_prototype_chain.md)
-JavaScript 高级教程 --- 继承与原型链
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
 
-### [闭包](https://github.com/fightingljm/myblog/blob/master/blogs/closures.md)
-JavaScript 中级教程 --- 闭包
+### `yarn test`
 
-### [react Hoc Ref](https://github.com/fightingljm/myblog/blob/master/blogs/reactHocRef.md)
-react 中通过 ref 获取高阶组件（HOC）子组件实例的解决方案
+Launches the test runner in the interactive watch mode.<br />
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### [ZSH](https://github.com/fightingljm/myblog/blob/master/blogs/zsh.md)
-终端 zsh - Oh My Zsh 终极体验
+### `yarn build`
 
-### [React Hook](https://github.com/fightingljm/myblog/blob/master/blogs/reactHook.md)
-useEffect useMemo useCallback 使用hook编写redux
+Builds the app for production to the `build` folder.<br />
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-### [Xcode](https://github.com/fightingljm/myblog/blob/master/blogs/xcode.md)
-Xcode 开发中遇到的问题及解决方法
+The build is minified and the filenames include the hashes.<br />
+Your app is ready to be deployed!
 
-### [git](https://github.com/fightingljm/myblog/blob/master/blogs/git.md)
-git 相关命令、fork 流程，commit 规范，commit emoji指南
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### [react-native TextInput](https://github.com/fightingljm/myblog/blob/master/blogs/rnTextInputbug.md)
-react-native TextInput 中文输入bug","
+### `yarn eject`
 
-### [react-native UM IOS](https://github.com/fightingljm/myblog/blob/master/blogs/umRnIos.md)
-react native 友盟统计 IOS 端集成
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-### [react-native UM Android](https://github.com/fightingljm/myblog/blob/master/blogs/umRnAndroid.md)
-react native 友盟统计 Android 端集成
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-### [ECMAScript 6](https://github.com/fightingljm/myblog/blob/master/blogs/es6.md)
-记录被自己忽略的 es6 特性
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-### [Wechat Miniprogram](https://github.com/fightingljm/myblog/blob/master/blogs/wechatMiniprogram.md)
-微信小程序踩坑记录
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-### [Markdown 代码块语言对应的关键字](https://github.com/fightingljm/myblog/blob/master/blogs/markdown.md)
-Markdown 代码块语言对应的关键字
+## Learn More
 
-### [Dangerously Set InnerHTML](https://github.com/fightingljm/myblog/blob/master/blogs/dangerouslySetInnerHTML.md)
-HTML 动态渲染
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-### [Object assign](https://github.com/fightingljm/myblog/blob/master/blogs/objectAssign.md)
-用于将所有可枚举的属性的值从一个或多个源对象复制到目标对象，返回目标对象。
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-### [Beautiful MarkDown](https://github.com/fightingljm/myblog/blob/master/blogs/beautifulMd.md)
-Github MarkDown And Emoji
+### Code Splitting
 
-### [Redux](https://github.com/fightingljm/myblog/blob/master/blogs/redux.md)
-Redux 工作流 action reducer store
+This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
 
-### [HTML 标签的嵌套规则](https://github.com/fightingljm/myblog/blob/master/blogs/htmlTag.md)
-HTML 标签的嵌套规则
+### Analyzing the Bundle Size
 
-### [百度地图 API](https://github.com/fightingljm/myblog/blob/master/blogs/baiduMapApi.md)
-百度地图 API 踩坑记录
+This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
-### [css 超出部分省略号](https://github.com/fightingljm/myblog/blob/master/blogs/textOverflowEllipsis.md)
-超出部分省略号 单行,多行,模糊 处理","
+### Making a Progressive Web App
 
-### [Create React App](https://github.com/fightingljm/myblog/blob/master/blogs/createReactApp.md)
-使用Create-React-App脚手架搭建antd-mobile的开发环境","url
+This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
 
-### [React Router 4](https://github.com/fightingljm/myblog/blob/master/blogs/reactRouter4.md)
-React Router 4 的使用方法
+### Advanced Configuration
 
-### [SVG](https://github.com/fightingljm/myblog/blob/master/blogs/svg.md)
-关于 SVG
+This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
 
-### [Moment JS](https://github.com/fightingljm/myblog/blob/master/blogs/momentjs.md)
-JavaScript 日期处理类库
+### Deployment
 
-### [Goods SKU](https://github.com/fightingljm/myblog/blob/master/blogs/goodsSku.md)
-电商后台 商品规格管理
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
 
-### [数组对象的一些方法](https://github.com/fightingljm/myblog/blob/master/blogs/arrayObject.md)
-数组对象的一些方法
+### `yarn build` fails to minify
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Breadcrumb, Alert } from 'antd';
+import { Breadcrumb, Alert, Button } from 'antd';
 import { HashRouter as Router, Route, Switch, Link, withRouter } from 'react-router-dom'
 import './App.css';
 
@@ -40,6 +40,7 @@ const Home = withRouter(props => {
 	].concat(extraBreadcrumbItems);
 	return (
 		<div className="demo">
+			<Button type="primary">Button</Button>
 			<div className="demo-nav">
 				<Link to="/">Home</Link>
 				<Link to="/apps">Application List</Link>
