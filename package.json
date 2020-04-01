@@ -7,7 +7,8 @@
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
     "eject": "react-scripts eject",
-    "pre-lint": "eslint $(git diff-index --cached HEAD --name-only --diff-filter ACMR | egrep '.js$')"
+    "pre-lint": "eslint $(git diff-index --cached HEAD --name-only --diff-filter ACMR | egrep '.js$')",
+    "commit-lint": "commitlint -E HUSKY_GIT_PARAMS"
   },
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
@@ -118,7 +119,7 @@
   ],
   "husky": {
     "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+      "commit-msg": "npm run commit-lint"
     }
   }
 }
