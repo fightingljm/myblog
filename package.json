@@ -2,6 +2,12 @@
   "name": "myblog-update",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-scripts eject"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -17,11 +23,9 @@
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1"
   },
-  "scripts": {
-    "start": "react-app-rewired start",
-    "build": "react-app-rewired build",
-    "test": "react-app-rewired test",
-    "eject": "react-scripts eject"
+  "devDependencies": {
+    "husky": "^4.2.3",
+    "lint-staged": "^10.1.1"
   },
   "eslintConfig": {
     "extends": "react-app",
@@ -48,13 +52,16 @@
         }
       ],
       "react/static-property-placement": [
-        2, "static public field"
+        2,
+        "static public field"
       ],
       "lines-between-class-members": [
-        2, "never"
+        2,
+        "never"
       ],
       "semi": [
-        2, "never"
+        2,
+        "never"
       ],
       "react/prefer-stateless-function": 0,
       "import/prefer-default-export": 0,
@@ -103,5 +110,14 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.js": "eslint --ext .js",
+    "**/*.vue": "eslint --ext .vue"
   }
 }

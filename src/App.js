@@ -6,7 +6,7 @@ import {
     NotificationOutlined,
     UserOutlined
 } from '@ant-design/icons'
-import './App.css'
+import './App.css';
 
 const { SubMenu } = Menu
 const { Header, Content, Footer, Sider } = Layout
