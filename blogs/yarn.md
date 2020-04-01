@@ -78,7 +78,7 @@ yarn patch-package package-name
 
 - 添加内容
 
-  ```
+  ```hosts
   # Github Start
   
   13.250.177.223 gist.github.com
@@ -88,14 +88,17 @@ yarn patch-package package-name
   13.229.188.59 www.github.com
   
   151.101.56.133 raw.githubusercontent.com
+  // 最后两条更快
+  192.30.253.112 github.com
+  
+  151.101.185.194 github.global.ssl.fastly.net
   
   # Github End
   ```
-
-  
-
+  ```
 [Mac OS 下三种修改Hosts文件的方法](https://blog.csdn.net/qq_41162289/article/details/80239468)
 
 [参考1](https://blog.csdn.net/qq_41162289/article/details/80239468)
 
 [参考2](https://blog.csdn.net/sinyusin/article/details/88776939)
+  ```
