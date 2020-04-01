@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Layout, Menu, Breadcrumb } from 'antd'
-import { HashRouter as Router } from 'react-router-dom'
+import { HashRouter as Router } from 'react-router-dom';
 import {
     LaptopOutlined,
     NotificationOutlined,
