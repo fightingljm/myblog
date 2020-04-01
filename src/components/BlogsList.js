@@ -2,8 +2,8 @@ import React from 'react'
 import axios from 'axios';
 
 import { getJsonData } from './helpers.js';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import CircularProgress from 'material-ui/CircularProgress';
+// import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+// import CircularProgress from 'material-ui/CircularProgress';
 
 import BlogCard from './BlogCard.js';
 
@@ -69,22 +69,22 @@ class BlogsList extends React.Component {
 			}
 		}
 
-		let styles = {
-			circle: {
-				textAlign: 'center',
-				margin: '10em auto'
-			}
-		}
+		// let styles = {
+		// 	circle: {
+		// 		textAlign: 'center',
+		// 		margin: '10em auto'
+		// 	}
+		// }
 		return (
 			<div className='blogList-root'>
-				{
+				{/* {
 					this.state.wait
 					? <div style={styles.circle}>
 						<MuiThemeProvider>
 							<CircularProgress size={60} thickness={7} />
 						</MuiThemeProvider>
 					</div> : ''
-				}
+				} */}
 				{
 					blogCards
 				}

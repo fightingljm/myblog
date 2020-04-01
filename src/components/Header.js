@@ -1,5 +1,5 @@
 import React from 'react';
-import { hashHistory } from 'react-router'
+// import { hashHistory } from 'react-router'
 
 class Header extends React.Component {
   constructor() {
@@ -11,9 +11,9 @@ class Header extends React.Component {
   render(){
     return(
       <header>
-        <button className="btn" onClick={()=>hashHistory.goBack()}> <i className="fa fa-arrow-left" aria-hidden="true"></i> Back </button>
+        {/* <button className="btn" onClick={()=>hashHistory.goBack()}> <i className="fa fa-arrow-left" aria-hidden="true"></i> Back </button> */}
         <h2>{this.props.title}</h2>
-        <button className="btn" onClick={()=>hashHistory.push('/')}> <i className="fa fa-home" aria-hidden="true"></i> Home </button>
+        {/* <button className="btn" onClick={()=>hashHistory.push('/')}> <i className="fa fa-home" aria-hidden="true"></i> Home </button> */}
       </header>
     )
   }

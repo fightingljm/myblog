@@ -1,6 +1,6 @@
 import React from 'react'
-import SearchBtn from 'material-ui/svg-icons/action/search';
-import TextField from 'material-ui/TextField';
+// import SearchBtn from 'material-ui/svg-icons/action/search';
+// import TextField from 'material-ui/TextField';
 
 class Search extends React.Component {
   handelInput(e){
@@ -53,7 +53,7 @@ class Search extends React.Component {
     return(
       <div style={styles.root}>
         <h1 style={styles.title}>ALL</h1>
-        <div style={styles.search} className="clearfix">
+        {/* <div style={styles.search} className="clearfix">
           <span style={styles.span}><SearchBtn style={styles.searchBtn}/></span>
           <TextField
             hintText="搜索"
@@ -62,7 +62,7 @@ class Search extends React.Component {
             inputStyle={styles.inputStyle}
             style={styles.text}
             onChange={this.handelInput.bind(this)}/>
-        </div>
+        </div> */}
       </div>
     )
   }

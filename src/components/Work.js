@@ -1,8 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import CircularProgress from 'material-ui/CircularProgress';
+// import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+// import CircularProgress from 'material-ui/CircularProgress';
 
 class Work extends React.Component {
   constructor() {
@@ -16,15 +16,15 @@ class Work extends React.Component {
       .then( res => this.setState({data: res.data}) )
   }
   render(){
-    let styles={
-      circle:{
-        textAlign:'center',
-        margin:'10em auto'
-      }
-    }
+    // let styles={
+    //   circle:{
+    //     textAlign:'center',
+    //     margin:'10em auto'
+    //   }
+    // }
     return(
       <div style={{width:'100%'}} className='work-warp'>
-        {this.state.data.length==0 ?
+        {/* {this.state.data.length==0 ?
           <div style={styles.circle}>
             <MuiThemeProvider>
               <CircularProgress  size={60} thickness={7}/>
@@ -39,7 +39,7 @@ class Work extends React.Component {
               </div>
             </div>
           ) )
-        }
+        } */}
       </div>
     )
   }

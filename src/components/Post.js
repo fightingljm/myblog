@@ -3,8 +3,8 @@ import axios from 'axios';
 import marked from 'marked';
 import hljs from 'highlight.js';
 
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import CircularProgress from 'material-ui/CircularProgress';
+// import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+// import CircularProgress from 'material-ui/CircularProgress';
 
 marked.setOptions({
   highlight: function (code) {
@@ -24,16 +24,16 @@ class Post extends React.Component {
       .then(res => this.setState({data:res.data}))
   }
   render(){
-    let styles={
-      circle:{
-        textAlign:'center',
-        margin:'30px auto'
-      }
-    }
+    // let styles={
+    //   circle:{
+    //     textAlign:'center',
+    //     margin:'30px auto'
+    //   }
+    // }
     return(
       <div style={{width:'100%'}}>
         {/* {this.props.params.title} */}
-        {
+        {/* {
           this.state.data.length==0 ?
           <div style={styles.circle}>
             <MuiThemeProvider>
@@ -41,7 +41,7 @@ class Post extends React.Component {
             </MuiThemeProvider>
           </div> :
           <div dangerouslySetInnerHTML={{__html:marked(this.state.data)}} className='post-content'></div>
-        }
+        } */}
       </div>
     )
   }

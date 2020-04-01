@@ -1,10 +1,10 @@
 import React from 'react'
-import { Link } from 'react-router';
+// import { Link } from 'react-router';
 
-import Drawer from 'material-ui/Drawer';
-import MenuItem from 'material-ui/MenuItem';
-import IconButton from 'material-ui/IconButton';
-import Menu from 'material-ui/svg-icons/navigation/menu';
+// import Drawer from 'material-ui/Drawer';
+// import MenuItem from 'material-ui/MenuItem';
+// import IconButton from 'material-ui/IconButton';
+// import Menu from 'material-ui/svg-icons/navigation/menu';
 
 class LeftNav extends React.Component {
   constructor() {
@@ -39,7 +39,7 @@ class LeftNav extends React.Component {
     }
     return (
       <div>
-        <IconButton tooltip="menu"
+        {/* <IconButton tooltip="menu"
           onClick={this.handleToggle.bind(this)}
           iconStyle={styles.smallIcon}
           style={styles.small}>
@@ -65,7 +65,7 @@ class LeftNav extends React.Component {
               <Link to='/about' activeStyle={{color:'#000',fontSize:'22px'}}> <i className="fa fa-font" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp; About </Link>
             </MenuItem>
           </div>
-        </Drawer>
+        </Drawer> */}
       </div>
     );
   }
