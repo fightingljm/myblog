@@ -30,7 +30,7 @@ wx.navigateTo({
   })
   ```
 
-  在获取的时候 `decodeURIComponent(options.url)`
+  >⚠️注意：获取的时候要使用 `decodeURLComponent(options.url)`  函数进行解码
 
 #### 动态修改页面标题
 
