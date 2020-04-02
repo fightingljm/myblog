@@ -1,6 +1,46 @@
 [
     {
-        "title": "javascript",
+        "title": "JavaScript",
         "url": "javascript"
+    },
+    {
+        "title": "CSS",
+        "url": "css"
+    },
+    {
+        "title": "HTML",
+        "url": "html"
+    },
+    {
+        "title": "React",
+        "url": "react"
+    },
+    {
+        "title": "React Native",
+        "url": "reactnative"
+    },
+    {
+        "title": "IOS",
+        "url": "ios"
+    },
+    {
+        "title": "Swift",
+        "url": "swift"
+    },
+    {
+        "title": "Objective-C",
+        "url": "objectivec"
+    },
+    {
+        "title": "Node",
+        "url": "node"
+    },
+    {
+        "title": "Yarn",
+        "url": "yarn"
+    },
+    {
+        "title": "Git",
+        "url": "git"
     }
 ]
