@@ -1,18 +1,15 @@
 import axios from 'axios'
 
 const baseURL = "https://raw.githubusercontent.com/fightingljm/myblog/react-update/json/"
+const blogURL = "https://raw.githubusercontent.com/fightingljm/myblog/react-update/blogs/"
 
 export default {
-    get (url, params) {
+    get (url, { markdown } = {}) {
+        url = `${markdown ? blogURL : baseURL}${url}.${markdown ? 'md' : 'json'}`
         return axios({
             method: 'get',
             baseURL,
-            url: `${baseURL}${url}.json?v=${Math.random()}`,
-            // params,
-            // timeout: 10000,
-            // headers: {
-            //     'X-Requested-With': 'XMLHttpRequest'
-            // }
+            url
         }).then((response) => {
             return checkStatus(response)
         }).then((res) => {

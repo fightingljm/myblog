@@ -1,90 +1,45 @@
-import React, { useState } from 'react'
-import { Layout, Menu, Breadcrumb } from 'antd'
-import { HashRouter as Router } from 'react-router-dom'
-import {
-    LaptopOutlined,
-    NotificationOutlined,
-    UserOutlined
-} from '@ant-design/icons'
+import React, { Component } from "react"
 import './App.css'
-import Header from './pages/Header'
+import {
+    Route,
+    Switch,
+    withRouter
+} from "react-router-dom"
+import Welcome from "./pages/Welcome"
+import Layout from "./pages/Layout"
+import request from './utils/request'
 
-const { SubMenu } = Menu
-const { Content, Footer, Sider } = Layout
-
-const App = () => {
-    const [collapsed, onCollapse] = useState()
-    return (
-        <Router>
-            <Layout>
-                <Header />
-                <Content style={{ padding: '0 50px' }}>
-                    <Breadcrumb style={{ margin: '16px 0' }}>
-                        <Breadcrumb.Item>Home</Breadcrumb.Item>
-                        <Breadcrumb.Item>List</Breadcrumb.Item>
-                        <Breadcrumb.Item>App</Breadcrumb.Item>
-                    </Breadcrumb>
-                    <Layout className="site-layout-background" style={{ padding: '24px 0' }}>
-                        <Sider className="site-layout-background" width={200}>
-                            <Menu
-                                mode="inline"
-                                defaultSelectedKeys={['1']}
-                                defaultOpenKeys={['sub1']}
-                                style={{ height: '100%' }}
-                            >
-                                <SubMenu
-                                    key="sub1"
-                                    title={
-                                        <span>
-                                            <UserOutlined />
-                                            subnav 1
-                                        </span>
-                                    }
-                                >
-                                    <Menu.Item key="1">option1</Menu.Item>
-                                    <Menu.Item key="2">option2</Menu.Item>
-                                    <Menu.Item key="3">option3</Menu.Item>
-                                    <Menu.Item key="4">option4</Menu.Item>
-                                </SubMenu>
-                                <SubMenu
-                                    key="sub2"
-                                    title={
-                                        <span>
-                                            <LaptopOutlined />
-                                            subnav 2
-                                        </span>
-                                    }
-                                >
-                                    <Menu.Item key="5">option5</Menu.Item>
-                                    <Menu.Item key="6">option6</Menu.Item>
-                                    <Menu.Item key="7">option7</Menu.Item>
-                                    <Menu.Item key="8">option8</Menu.Item>
-                                </SubMenu>
-                                <SubMenu
-                                    key="sub3"
-                                    title={
-                                        <span>
-                                            <NotificationOutlined />
-                                            subnav 3
-                                        </span>
-                                    }
-                                >
-                                    <Menu.Item key="9">option9</Menu.Item>
-                                    <Menu.Item key="10">option10</Menu.Item>
-                                    <Menu.Item key="11">option11</Menu.Item>
-                                    <Menu.Item key="12">option12</Menu.Item>
-                                </SubMenu>
-                            </Menu>
-                        </Sider>
-                        <Content style={{ padding: '0 24px', minHeight: 280 }}>Content</Content>
-                    </Layout>
-                </Content>
-                <Footer style={{ textAlign: 'center' }}>
-                    Ant Design ©2018 Created by Ant UED
-                </Footer>
-            </Layout>
-        </Router>
-    )
+class App extends Component {
+    state = {
+        data: []
+    }
+    async componentDidMount() {
+        try {
+            const { data } = await request.get('header')
+            this.setState({
+                data
+            })
+        } catch (err) {
+            console.log('@@@-err', err)
+        }
+    }
+    render() {
+        const { data } = this.state
+        return (
+            <Switch>
+                <Route exact path="/" >
+                    <Welcome pathData={data}/>
+                </Route>
+                {
+                    data.map((item, index) => (
+                        <Route key={`/${item.url}`} path={`/${item.url}`}>
+                            <Layout pathData={data} />
+                        </Route>
+                    ))
+                }
+            </Switch>
+        )
+    }
 }
 
-export default App
+export default withRouter(App)
