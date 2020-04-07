@@ -42,5 +42,29 @@
     {
         "title": "Git",
         "url": "git"
+    },
+    {
+        "title": "ES6",
+        "url": "es6"
+    },
+    {
+        "title": "Flutter",
+        "url": "flutter"
+    },
+    {
+        "title": "Jest",
+        "url": "jest"
+    },
+    {
+        "title": "Markdown",
+        "url": "markdown"
+    },
+    {
+        "title": "SQL",
+        "url": "sql"
+    },
+    {
+        "title": "Wechat",
+        "url": "wechat"
     }
 ]
