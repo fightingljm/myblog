@@ -6,7 +6,7 @@ import {
     withRouter
 } from "react-router-dom"
 import Welcome from "./pages/Welcome"
-import Layout from "./pages/Layout"
+import Layout from "./pages/Layout/index"
 import request from './utils/request'
 
 class App extends Component {
@@ -20,7 +20,7 @@ class App extends Component {
                 data
             })
         } catch (err) {
-            console.log('@@@-err', err)
+            console.log('@@@-App-err', err)
         }
     }
     render() {

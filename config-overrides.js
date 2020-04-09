@@ -1,4 +1,4 @@
-const { override, fixBabelImports, addLessLoader } = require('customize-cra');
+const { override, fixBabelImports, addLessLoader, addWebpackResolve } = require('customize-cra');
 const theme = require('./theme')
 
 module.exports = override(
@@ -10,5 +10,8 @@ module.exports = override(
     addLessLoader({
         javascriptEnabled: true,
         modifyVars: theme
+    }),
+    addWebpackResolve({
+        extensions: ['.ts', '.tsx', '.js', '.json']
     })
 )

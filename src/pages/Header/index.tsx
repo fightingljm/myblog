@@ -1,14 +1,19 @@
 import React, { Component } from 'react'
 import { Layout, Menu } from 'antd'
-import request from '../../utils/request'
-import { Link, withRouter } from 'react-router-dom'
+import { Link, withRouter, RouteComponentProps } from 'react-router-dom'
+import { HeaderPropsType } from '../PropsType'
 
 const { Header } = Layout
 
-class HeaderCom extends Component {
+interface HeaderProps extends RouteComponentProps {
+    pathData: Array < HeaderPropsType >,
+}
+
+class HeaderCom extends Component<HeaderProps, any> {
     render() {
-        const { pathData, match } = this.props
-        const defaultSelectedKey = pathData.findIndex((item) => item.url === match.path.substring(1))
+        const { pathData, location } = this.props
+        const locationList = location.pathname.split("/").filter((item) => item)
+        const defaultSelectedKey = pathData.findIndex((item) => item.url === locationList[0])
         return (
             <Header className="header">
                 <div className="logo" />

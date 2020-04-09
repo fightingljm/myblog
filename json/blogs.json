@@ -223,8 +223,8 @@
     ],
     "sql": [
         {
-            "title": "SQLite",
-            "desc": "SQLite",
+            "title": "FMDB",
+            "desc": "FMDB",
             "url": "FMDB"
         },
         {

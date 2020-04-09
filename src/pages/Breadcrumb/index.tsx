@@ -1,23 +1,27 @@
 import React, { Component } from 'react'
 import { Breadcrumb } from 'antd'
-import { withRouter, Link } from 'react-router-dom'
+import { withRouter, Link, RouteComponentProps } from 'react-router-dom'
 
-class BreadcrumbCom extends Component {
+interface BreadcrumbProps extends RouteComponentProps {
+    
+}
+
+class BreadcrumbCom extends Component<BreadcrumbProps, any> {
     render() {
         const { location } = this.props
-        const breadList = location.pathname.split("/")
+        const breadList = location.pathname.split("/").filter((item) => item)
         return (
             <Breadcrumb>
                 {
-                    breadList.map((item, index) => item ? (
-                        <Breadcrumb.Item>
+                    breadList.map((item, index) => (
+                        <Breadcrumb.Item key={index}>
                             <Link to={breadList.slice(0, index+1).join("/")}>
                                 {
                                     item
                                 }
                             </Link>
                         </Breadcrumb.Item>
-                    ) : null)
+                    ))
                 }
             </Breadcrumb>
         )
