@@ -1,14 +1,13 @@
 import React, { Component } from 'react'
-import { Layout } from 'antd'
+import { Layout, Skeleton } from 'antd'
 import request from '../../utils/request'
 import marked from 'marked'
 import hljs from 'highlight.js'
 import './index.css'
 import { withRouter, RouteComponentProps } from 'react-router-dom'
-// import {
-//     HeaderPropsType
-//     BlogPropsType
-// } from '../PropsType'
+import {
+    blogDataType
+} from '../PropsType'
 
 const { Content } = Layout
 
@@ -19,7 +18,7 @@ marked.setOptions({
 })
 
 interface ContentProps extends RouteComponentProps {
-    blogs: any
+    blogData: blogDataType
 }
 
 interface ContentState {
@@ -49,8 +48,17 @@ class ContentCom extends Component<ContentProps, ContentState> {
     render() {
         const { data } = this.state
         return (
-            <Content style={{ minHeight: 280 }}>
-                <div dangerouslySetInnerHTML={{ __html: marked(data) }} className='post-content'></div>
+            <Content className='post-content' style={{ minHeight: 280 }}>
+                {
+                    !data ? (
+                        <Skeleton active />
+                    ) : (
+                        <div
+                            dangerouslySetInnerHTML={{ __html: marked(data) }}
+                            className='post-content'
+                        />
+                    )
+                }
             </Content>
         )
     }

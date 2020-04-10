@@ -8,35 +8,40 @@ import {
 import Welcome from "./pages/Welcome"
 import Layout from "./pages/Layout/index"
 import request from './utils/request'
+import NoFoundPage from './pages/404'
 
 class App extends Component {
     state = {
-        data: []
+        pathData: [],
+        blogData: []
     }
     async componentDidMount() {
         try {
-            const { data } = await request.get('header')
+            const { data: pathData } = await request.get('header')
+            const { data: blogData } = await request.get('blogs')
             this.setState({
-                data
+                pathData,
+                blogData
             })
         } catch (err) {
             console.log('@@@-App-err', err)
         }
     }
     render() {
-        const { data } = this.state
+        const { pathData, blogData } = this.state
         return (
             <Switch>
                 <Route exact path="/" >
-                    <Welcome pathData={data}/>
+                    <Welcome pathData={pathData} blogData={blogData}/>
                 </Route>
                 {
-                    data.map((item, index) => (
+                    pathData.map((item, index) => (
                         <Route key={`/${item.url}`} path={`/${item.url}`}>
-                            <Layout pathData={data} />
+                            <Layout pathData={pathData} blogData={blogData}/>
                         </Route>
                     ))
                 }
+                <Route component={NoFoundPage} />
             </Switch>
         )
     }

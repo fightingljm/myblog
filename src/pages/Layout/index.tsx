@@ -1,69 +1,48 @@
 import React, { Component } from 'react'
 import { Layout, Input } from 'antd'
 import Header from '../Header/index'
-import Menu from '../Menu/index'
+import Sider from '../Sider/index'
 import Breadcrumb from '../Breadcrumb/index'
 import ContentCom from '../Content/index'
 import './index.css'
 import {
-    HeaderPropsType
-    // BlogPropsType
+    pathDataType,
+    blogDataType
 } from '../PropsType'
-import request from '../../utils/request'
 import { withRouter, RouteComponentProps } from 'react-router-dom'
 
-const { Content, Footer, Sider } = Layout
+const { Content, Footer } = Layout
 const { Search } = Input
 
 interface LayoutProps extends RouteComponentProps {
-    pathData: Array<HeaderPropsType>
+    pathData: pathDataType,
+    blogData: blogDataType
 }
 
-interface LayoutState {
-    data: any
-    // data: {
-    //     <string>: Array<BlogPropsType>
-    // }
-}
-
-class LayoutCom extends Component<LayoutProps, LayoutState>{
-    state = {
-        data: {}
-    }
-    async componentDidMount() {
-        try {
-            const { data } = await request.get('blogs')
-            this.setState({
-                data
-            })
-        } catch (err) {
-            console.log('@@@-Menu-err', err)
-        }
-    }
+class LayoutCom extends Component<LayoutProps, any>{
     render() {
-        const { data } = this.state
-        const { pathData } = this.props
+        const { pathData, blogData } = this.props
         return (
             <Layout>
                 <Header pathData={pathData}/>
-                <Content style={{ padding: '0 50px' }}>
-                    <div className="top">
-                        <Breadcrumb />
-                        <Search
-                            placeholder="搜索"
-                            onSearch={value => console.log(value)}
-                            style={{ width: 200 }}
-                        />
-                    </div>
-                    <Layout className="site-layout-background">
-                        <Sider className="site-layout-background" width={300}>
-                            <Menu blogs={data}/>
-                        </Sider>
-                        <ContentCom blogs={data}/>
+                <Layout>
+                    <Sider blogData={blogData} pathData={pathData}/>
+                    <Layout>
+                        <Content style={{ padding: '0 50px' }}>
+                            <div className="top">
+                                <Breadcrumb />
+                                <Search
+                                    placeholder="搜索"
+                                    onSearch={value => console.log(value)}
+                                    style={{ width: 200 }}
+                                />
+                            </div>
+                            <ContentCom blogData={blogData}/>
+                        </Content>
                     </Layout>
-                </Content>
+                </Layout>
                 <Footer style={{ textAlign: 'center' }}>
-                    Ant Design ©2018 Created by Ant UED
+                    liujinmeng Blog ©2017 Created by ljm
                 </Footer>
             </Layout>
         )
