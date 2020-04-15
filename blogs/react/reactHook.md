@@ -4,17 +4,17 @@
 
 - [React Hook API](#react-hook-api)
     - [useEffect](#useeffect)
-        - [最基本的使用](#最基本的使用)
-        - [响应更新](#响应更新)
-        - [处理Loading和Error](#处理loading和error)
-        - [处理表单](#处理表单)
-        - [自定义hooks](#自定义hooks)
+        - [最基本的使用](#%E6%9C%80%E5%9F%BA%E6%9C%AC%E7%9A%84%E4%BD%BF%E7%94%A8)
+        - [响应更新](#%E5%93%8D%E5%BA%94%E6%9B%B4%E6%96%B0)
+        - [处理Loading和Error](#%E5%A4%84%E7%90%86loading%E5%92%8Cerror)
+        - [处理表单](#%E5%A4%84%E7%90%86%E8%A1%A8%E5%8D%95)
+        - [自定义hooks](#%E8%87%AA%E5%AE%9A%E4%B9%89hooks)
     - [useReducer](#usereducer)
-        - [使用useReducer整合逻辑](#使用usereducer整合逻辑)
-        - [取消数据请求](#取消数据请求)
+        - [使用useReducer整合逻辑](#%E4%BD%BF%E7%94%A8usereducer%E6%95%B4%E5%90%88%E9%80%BB%E8%BE%91)
+        - [取消数据请求](#%E5%8F%96%E6%B6%88%E6%95%B0%E6%8D%AE%E8%AF%B7%E6%B1%82)
     - [useMemo](#usememo)
     - [useCallback](#usecallback)
-    - [另外](#另外)
+    - [另外](#%E5%8F%A6%E5%A4%96)
 
 <!-- /TOC -->
 
@@ -390,6 +390,7 @@ const { data, isLoading, isError, doFetch } = useFetchApi()
 ```
 
 #### useReducer
+
 ##### 使用useReducer整合逻辑
 
 上面我们使用了各种state hooks来管理状态，包括loading、error、data等状态，
@@ -685,3 +686,5 @@ useEffect、useMemo、useCallback都是自带闭包的。
 也就是说，每一次组件的渲染，其都会捕获当前组件函数上下文中的状态(state, props)，
 所以每次第三种hooks的执行，反映的也都是当前的状态，你无法使用它们来捕获上一次的状态。
 对于这种情况我们应该使用ref来访问
+
+[React Hoooks 进阶](https://github.com/SunShinewyf/issue-blog/issues/50)

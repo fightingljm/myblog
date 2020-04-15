@@ -1,0 +1,1 @@
+[超实用 Typescript 内置类型与自定义类型](https://segmentfault.com/a/1190000019402237#item-4)
