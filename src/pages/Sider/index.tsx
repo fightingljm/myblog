@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import { Menu, Layout } from 'antd'
+import { Menu, Layout, Avatar, Tag } from 'antd'
 import { withRouter, RouteComponentProps, Link } from 'react-router-dom'
-import { pathDataType, BlogPropsType, blogDataType, BlogKeys } from '../PropsType'
+import { pathDataType, BlogPropsType, blogDataType } from '../PropsType'
+import './index.css'
 
-const { SubMenu } = Menu
 const { Sider } = Layout
 
 interface SiderProps extends RouteComponentProps {
@@ -15,13 +15,27 @@ class SiderCom extends Component<SiderProps, any> {
     render() {
         const { blogData, pathData, location } = this.props
         const locationList = location.pathname.split("/").filter((item) => item)
-        console.log('@@@-locationList', locationList);
-        
         return (
-            <Sider className="site-layout-background" width={300}>
+            <Sider className="sider" width={300}>
+                <div className="menuTop">
+                    <Avatar style={{ backgroundColor: "#60b330", verticalAlign: 'middle' }} size="large">
+                        ljm
+                    </Avatar>
+                    <a href="https://github.com/fightingljm">fightingljm</a>
+                    <div style={{ padding: "10px", display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
+                        <Tag color="magenta">magenta</Tag>
+                        <Tag color="red">red</Tag>
+                        <Tag color="volcano">volcano</Tag>
+                        <Tag color="orange">orange</Tag>
+                        <Tag style={{ marginTop: '10px' }} color="green">green</Tag>
+                        <Tag style={{ marginTop: '10px' }} color="blue">blue</Tag>
+                        <Tag style={{ marginTop: '10px' }} color="geekblue">geekblue</Tag>
+                        <Tag style={{ marginTop: '10px' }} color="purple">purple</Tag>
+                    </div>
+                </div>
                 <Menu
                     mode="inline"
-                    style={{ height: '100%' }}
+                    className="menu"
                     defaultOpenKeys={[locationList[0]]}
                     defaultSelectedKeys={[locationList[1]]}
                 >
@@ -32,22 +46,13 @@ class SiderCom extends Component<SiderProps, any> {
                                 return null
                             }
                             return (
-                                <SubMenu
-                                    key={pItem.url}
-                                    title={pItem.title}
-                                >
-                                    {
-                                        data.map((item, index) => (
-                                            <Menu.Item key={item.url}>
-                                                <Link to={`/${pItem.url}/${item.url}`}>
-                                                    {
-                                                        item.title
-                                                    }
-                                                </Link>
-                                            </Menu.Item>
-                                        ))
-                                    }
-                                </SubMenu>
+                                <Menu.Item key={pItem.url} className="menuItem">
+                                    <Link to={`/${pItem.url}`}>
+                                        {
+                                            pItem.title
+                                        }
+                                    </Link>
+                                </Menu.Item>
                             )
                         })
                     }

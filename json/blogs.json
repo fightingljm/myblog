@@ -194,7 +194,7 @@
             "url": "git"
         }
     ],
-    "es6": [
+    "ECMAscript": [
         {
             "title": "ECMAScript 6",
             "desc": "记录被自己忽略的 es6 特性",

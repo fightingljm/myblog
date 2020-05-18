@@ -1,0 +1,36 @@
+.menuTop {
+  height: 180px;
+  background: #F3F5F8;
+  border-bottom: 2px solid #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.menu {
+    height: 100%;
+    background: #F3F5F8;
+    border-right-width: 0;
+}
+/* 选中背景 */
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+    background: #F3F5F8;
+}
+/* menu a */
+.menuItem a {
+  color: #4f4f4f;
+}
+/* 选中 menu a */
+.ant-menu-item-selected > a, .ant-menu-item-selected > a:hover {
+    color: #1F2530;
+    font-weight: 500;
+}
+/* 选中 menu item */
+.ant-menu-vertical .ant-menu-item::after, .ant-menu-vertical-left .ant-menu-item::after, .ant-menu-vertical-right .ant-menu-item::after, .ant-menu-inline .ant-menu-item::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    border-left: 3px solid #1DA57A;
+    border-right: 0;
+}

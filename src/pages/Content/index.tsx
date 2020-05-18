@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Layout, Skeleton } from 'antd'
+import { Layout, Skeleton, Button, Tabs, Card, Col, Row } from 'antd'
 import request from '../../utils/request'
 import marked from 'marked'
 import hljs from 'highlight.js'
@@ -8,8 +8,10 @@ import { withRouter, RouteComponentProps } from 'react-router-dom'
 import {
     blogDataType
 } from '../PropsType'
+import { AppstoreAddOutlined } from '@ant-design/icons'
 
 const { Content } = Layout
+const { TabPane } = Tabs
 
 marked.setOptions({
     highlight: function (code) {
@@ -48,8 +50,56 @@ class ContentCom extends Component<ContentProps, ContentState> {
     render() {
         const { data } = this.state
         return (
-            <Content className='post-content' style={{ minHeight: 280 }}>
-                {
+            <Content className='content'>
+                <div className="contentTop">
+                    <p className="title">Tasks</p>
+                    <Button
+                        type="primary"
+                        icon={<AppstoreAddOutlined />}
+                        style={{
+                            borderRadius: "3px"
+                        }}
+                    >
+                        New group
+                    </Button>
+                </div>
+                {/* <div>
+                    <Card title="Card title" bordered={false} style={{ width: 300 }}>
+                        <p>Card content</p>
+                        <p>Card content</p>
+                        <p>Card content</p>
+                    </Card>
+                </div> */}
+                <div className="site-card-wrapper">
+                    <Row gutter={16}>
+                        <Col span={8}>
+                            <Card title="Card title" bordered={false}>
+                                Card content
+                            </Card>
+                        </Col>
+                        <Col span={8}>
+                            <Card title="Card title" bordered={false}>
+                                Card content
+                            </Card>
+                        </Col>
+                        <Col span={8}>
+                            <Card title="Card title" bordered={false}>
+                                Card content
+                            </Card>
+                        </Col>
+                        <Col span={8}>
+                            <Card title="Card title" bordered={false}>
+                                Card content
+                            </Card>
+                        </Col>
+                        <Col span={8}>
+                            <Card title="Card title" bordered={false}>
+                                Card content
+                            </Card>
+                        </Col>
+                    </Row>
+                </div>
+                {/* {
                     !data ? (
                         <Skeleton active />
                     ) : (
@@ -58,7 +108,7 @@ class ContentCom extends Component<ContentProps, ContentState> {
                             className='post-content'
                         />
                     )
-                }
+                } */}
             </Content>
         )
     }
