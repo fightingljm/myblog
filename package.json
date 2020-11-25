@@ -46,7 +46,7 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
-    "highlight.js": "^9.15.10",
+    "highlight.js": "^10.1.2",
     "js-pinyin": "^0.1.9",
     "marked": "^0.3.6",
     "material-ui": "^0.17.0",
