@@ -101,3 +101,7 @@ Fetch是一种HTTP数据请求方式，是XMLHttpRequest的一种替代方案。
 - 
 
 - 符合关注分离，没有将输入、输出和用事件来跟踪的状态混杂在一个对象里
+
+
+
+[fetch请求获取blob和arraybuffer文件流及核心API使用总结](https://blog.csdn.net/WU5229485/article/details/85219165)
